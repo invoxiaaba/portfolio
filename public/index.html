@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+  <title>portfolio</title>
+</head>
+
+<body onload = "followMouse();">
+    <div id="ball"></div>
+  <noscript>
+    <strong>We're sorry but portfolio doesn't work properly without JavaScript enabled. Please enable it to
+      continue.</strong>
+  </noscript>
+  <div id="app"></div>
+  <!-- built files will be auto injected -->
+</body>
+
+<script>
+  var $ = document.querySelector.bind(document);
+  var $on = document.addEventListener.bind(document);
+
+  var xmouse, ymouse;
+  $on('mousemove', function (e) {
+    xmouse = e.clientX || e.pageX;
+    ymouse = e.clientY || e.pageY;
+  });
+
+  var ball = $('#ball');
+  var x = void 0,
+    y = void 0,
+    dx = void 0,
+    dy = void 0,
+    tx = 0,
+    ty = 0,
+    key = -1;
+
+  var followMouse = function followMouse() {
+    key = requestAnimationFrame(followMouse);
+
+    if (!x || !y) {
+      x = xmouse;
+      y = ymouse;
+    } else {
+      dx = (xmouse - x) * 0.125;
+      dy = (ymouse - y) * 0.125;
+      if (Math.abs(dx) + Math.abs(dy) < 0.1) {
+        x = xmouse;
+        y = ymouse;
+      } else {
+        x += dx;
+        y += dy;
+      }
+    }
+    ball.style.left = x + 'px';
+    ball.style.top = y + 'px';
+  };
+</script>
+
+</html>

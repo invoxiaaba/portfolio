@@ -1,0 +1,83 @@
+/* PROJET NAV */
+
+.nav-projet {
+  width: 100%;
+  z-index: 10;
+  @include absolute-position;
+
+  a:nth-child(1) {
+    left: 15%;
+  }
+  a:nth-child(2) {
+    left: 33%;
+  }
+  a:nth-child(3) {
+    left: 50%;
+  }
+  a:nth-child(4) {
+    left: 68%;
+  }
+  a:nth-child(5) {
+    left: 85%;
+  }
+}
+
+.nav-projet-link {
+  position: absolute;
+  top: 50%;
+  width: 20%;
+  transition: 1s ease-in-out;
+  transform: translate(-50%, -50%);
+  font-size: 8vw;
+  font-family: $primary-font;
+  text-decoration: none;
+  color: white;
+}
+
+.nav-projet:hover > * {
+  opacity: 0.3;
+}
+
+.nav-projet > a {
+  &:hover {
+    opacity: 1;
+  }
+}
+
+/* MAIN NAV */
+
+.main-nav {
+  position: absolute;
+  padding: 20px;
+  z-index: 11;
+  a {
+    color: red;
+  }
+  a.router-link-exact-active {
+    color: #42b983;
+  }
+}
+
+/* VIEW PROJET DETAIL */
+
+.nav-link-01 {
+  left: 15%;
+  animation: fade-01 1s ease forwards;
+}
+
+.nav-prev,
+.nav-next {
+  @include absolute-position;
+  position: fixed;
+  z-index: 11;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-prev {
+  left: 30px;
+}
+
+.nav-next {
+  left: calc(100% - 30px);
+}

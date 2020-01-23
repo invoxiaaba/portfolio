@@ -1,0 +1,24 @@
+/* CURSOR */
+.cursor {
+  position: fixed;
+  pointer-events: none;
+  user-select: none;
+  width: 0px;
+  height: 90px;
+  top: -30px;
+  left: -30px;
+}
+
+.newCursor {
+  width: 150px;
+  background-image: url("~@/assets/img/test.jpg");
+  background-size: cover;
+  transition: width 0.4s ease;
+}
+
+.newCursor2 {
+  width: 150px;
+  background-image: url("~@/assets/img/test2.jpg");
+  background-size: cover;
+  transition: width 0.4s ease;
+}

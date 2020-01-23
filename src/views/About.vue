@@ -1,5 +1,6 @@
 <template>
   <div class="container-about">
+    <div v-bind:style="{ ['width']: scrollbar() + '%' }" id="mybar"></div>
     <h1>About page</h1>
     <section>
       <div class="row">
@@ -16,14 +17,27 @@
     </section>
     <section class="desc">
       <h2>About</h2>
-      <div :style="cursorCircle" :class="{newCursor: cursor}" class="cursor"></div>
-      <p>
-        <span @mouseover="cursor = true" @mouseleave="cursor = false">ipsum dolor,</span> ipsum dolor, sit amet consectetur adipisicing elit. Praesentium doloribus, corrupti soluta impedit eos quasi mollitia maxime,
+      <div>
+        <div :style="cursorCircle" :class="{newCursor: cursorIsHidden}" class="cursor"></div>
+        <div :style="cursorCircle" :class="{newCursor2: cursorIsHidden2}" class="cursor"></div>
+
+        <span
+          @mouseover="cursorIsHidden = true"
+          @mouseleave="cursorIsHidden = false"
+          class="span"
+        >creative</span>
+        ipsum dolor, sit amet
+        consectetur adipisicing elit. Praesentium doloribus, corrupti soluta impedit eos quasi mollitia maxime,
+        nihil eius perspiciatis molestias quos accusamus nisi necessitatibus dolore numquam, sapiente velit sit.
+        <span
+          @mouseover="cursorIsHidden2 = true"
+          @mouseleave="cursorIsHidden2 = false"
+          class="span"
+        >creative</span>
+        dolor, sit amet consectetur adipisicing elit. Praesentium doloribus, corrupti soluta impedit eos quasi mollitia maxime,
         nihil eius perspiciatis molestias quos accusamus nisi necessitatibus dolore numquam, sapiente velit sit.
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium doloribus, corrupti soluta impedit eos quasi mollitia maxime,
-        nihil eius perspiciatis molestias quos accusamus nisi necessitatibus dolore numquam, sapiente velit sit.
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium doloribus, corrupti soluta impedit eos quasi mollitia maxime,
-      </p>
+      </div>
     </section>
     <section>
       <h2>Expériences</h2>
@@ -62,9 +76,12 @@
 export default {
   data() {
     return {
-      cursor: false,
+      cursorIsHidden: false,
+      cursorIsHidden2: false,
       xPage: 0,
-      yPage: 0
+      yPage: 0,
+      hideCursor: true,
+      scrolled: 100
     };
   },
   computed: {
@@ -78,16 +95,20 @@ export default {
         this.xPage = e.clientX - 15;
         this.yPage = e.clientY - 15;
       }, 100);
+    },
+    scrollbar() {
+      var winScroll =
+        document.body.scrollTop || document.documentElement.scrollTop;
+      var height =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      this.scrolled = (winScroll / height) * 100;
+      return this.scrolled;
     }
   },
   mounted() {
     document.addEventListener("mousemove", this.moveCursor);
-    // document.addEventListener("mouseleave", e => {
-    //   this.hideCursor = true;
-    // });
-    // document.addEventListener("mouseenter", e => {
-    //   this.hideCursor = false;
-    // });
+    window.addEventListener("scroll", this.scrollbar);
   }
 };
 </script>

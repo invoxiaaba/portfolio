@@ -1,7 +1,10 @@
 <template>
   <div class="container-about">
     <div v-bind:style="{ ['width']: scrollbar() + '%' }" id="mybar"></div>
-    <h1>About page</h1>
+    <Back />
+    <div class="header-page about">
+      <h1 class="text-anim">FRONT END DEVELOPER</h1>
+    </div>
     <section>
       <div class="row">
         <div class="col-6">Adrien bannwarth</div>
@@ -44,7 +47,7 @@
       <div class="row">
         <div class="col-3">HETIC</div>
         <div class="col-3">Student</div>
-        <div class="col-6">
+        <div v-scrollanimation class="col-6">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia magnam dolorem nam rerum dolore maiores repellendus culpa id r
           epudiandae tenetur beatae dignissimos optio,
           error necessitatibus, quibusdam praesentium quidem ullam vel?
@@ -73,7 +76,11 @@
 </template>
 
 <script>
+import Back from "../components/Back";
 export default {
+  components: {
+    Back
+  },
   data() {
     return {
       cursorIsHidden: false,
@@ -84,6 +91,7 @@ export default {
       scrolled: 100
     };
   },
+  
   computed: {
     cursorCircle() {
       return `transform: translateX(${this.xPage}px) translateY(${this.yPage}px) translateZ(0) translate3d(0, 0, 0);`;

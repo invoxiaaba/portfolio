@@ -42,6 +42,11 @@ const routes = [
     path: '/projet5',
     name: 'projet5',
     component: () => import('../views/Projet-5.vue')
+  },
+  {
+    path: '*',
+    name: 'error',
+    component: () => import('../views/Error.vue')
   }
 ]
 

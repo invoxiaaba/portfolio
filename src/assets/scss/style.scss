@@ -12,6 +12,7 @@
 @import "./components/cursor";
 @import "./components/btn";
 @import "./components/slider";
+@import "./components/scroll";
 
 #mybar {
   position: fixed;
@@ -19,4 +20,8 @@
   bottom: 5px;
   background-color: black;
   z-index: 1000;
+}
+
+.text-anim {
+  font-size: 6vw;
 }

@@ -8,15 +8,19 @@
   a:nth-child(1) {
     left: 15%;
   }
+
   a:nth-child(2) {
     left: 33%;
   }
+
   a:nth-child(3) {
     left: 50%;
   }
+
   a:nth-child(4) {
     left: 68%;
   }
+
   a:nth-child(5) {
     left: 85%;
   }
@@ -25,7 +29,6 @@
 .nav-projet-link {
   position: absolute;
   top: 50%;
-  width: 20%;
   transition: 1s ease-in-out;
   transform: translate(-50%, -50%);
   font-size: 8vw;
@@ -34,11 +37,11 @@
   color: white;
 }
 
-.nav-projet:hover > * {
+.nav-projet:hover>* {
   opacity: 0.3;
 }
 
-.nav-projet > a {
+.nav-projet>a {
   &:hover {
     opacity: 1;
   }
@@ -48,11 +51,23 @@
 
 .main-nav {
   position: absolute;
+  top: $margin;
+  right: $margin;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
   padding: 20px;
   z-index: 11;
+
   a {
-    color: red;
+    margin: 2px;
+    color: white;
+    text-decoration: none;
+    font-family: $thrid-font;
+    font-size: .7rem;
+    letter-spacing: .2px;
   }
+
   a.router-link-exact-active {
     color: #42b983;
   }
@@ -63,6 +78,7 @@
 .nav-link-01 {
   left: 15%;
   animation: fade-01 1s ease forwards;
+  animation-delay: .8s;
 }
 
 .nav-prev,
@@ -70,7 +86,9 @@
   @include absolute-position;
   position: fixed;
   z-index: 11;
+  font-family: $primary-font;
   color: white;
+  mix-blend-mode: difference;
   text-decoration: none;
 }
 
@@ -80,4 +98,60 @@
 
 .nav-next {
   left: calc(100% - 30px);
+}
+
+/* LANG */
+
+.nav-lang {
+  display: flex;
+  position: absolute;
+  bottom: $margin;
+  right: $margin;
+  padding: 20px;
+  font-size: 10px;
+  font-family: $thrid-font;
+  z-index: 11;
+
+  label {
+    margin: 5px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+/* Footer nav projet */
+
+.nav-footer-projet {
+  width: calc(100% - 100px);
+  padding: 0 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 300px;
+  background-color: black;
+
+  a {
+    color: white;
+    text-decoration: none;
+    font-family: $primary-font;
+    font-size: 7vw;
+  }
+}
+
+/* NAV BACK*/
+
+.nav-back {
+  position: fixed;
+  top: 50px;
+  right: 50px;
+
+  font-family: $thrid-font;
+  font-size: .8rem;
+  color: white;
+  mix-blend-mode: difference;
+
+
+  z-index: 3;
 }

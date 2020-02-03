@@ -1,41 +1,45 @@
 <template>
-  <div id="app">
-    <div class="container-projet">
-      <header class="header-projet">
-        <a class="nav-projet-link nav-link-01">01</a>
-        <router-link class="nav-next" to="/about">O2</router-link>
-        <router-link class="nav-prev" to="/projet5">05</router-link>
-        <transition name="fade" mode="out-in">
-          <router-view />
-        </transition>
-      </header>
-      <section>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis quod fuga repellendus debitis perspiciatis,
-          doloribus officiis atque non necessitatibus incidunt obcaecati eos autem aut enim voluptatibus neque qui at commodi.
-        </p>
-        <Slider />
-      </section>
-    </div>
+  <div class="container-projet">
+    <Back />
+    <header class="header-projet projet-1">
+      <a class="nav-projet-link nav-link-01">01</a>
+      <router-link class="nav-next" to="/about">O2</router-link>
+      <router-link class="nav-prev" to="/projet5">05</router-link>
+      <Scroll />
+    </header>
+    <section>
+      <p class="desc">
+        Lapetitephoho.C est un projet d'une photographe amateur. À travers ce site, vous pouvez y trouver son Portfolio
+        sous forme de site vitrine. Elle réalise aussi bien des portraits en couleurs qu'en noir et blanc mais aussi des
+        photos de paysages ou d'animaux.
+      </p>
+      <Slider
+        v-bind:images=" 
+          [
+          '/static/img/projet1.jpg',
+          '/static/img/projet1.jpg'
+           ]"
+      />
+    </section>
+    <Footer />
   </div>
 </template>
 
 <script>
 import Slider from "../components/Slider.vue";
+import Footer from "../components/FooterProjet";
+import Scroll from "../components/Scroll";
+import Back from "../components/Back";
 export default {
   name: "projet1",
   components: {
-    Slider
+    Slider,
+    Footer,
+    Scroll,
+    Back
   },
   data() {
-    return {
-      images: [
-        "https://cdn.pixabay.com/photo/2015/12/12/15/24/amsterdam-1089646_1280.jpg",
-        "https://cdn.pixabay.com/photo/2016/02/17/23/03/usa-1206240_1280.jpg",
-        "https://cdn.pixabay.com/photo/2015/05/15/14/27/eiffel-tower-768501_1280.jpg",
-        "https://cdn.pixabay.com/photo/2016/12/04/19/30/berlin-cathedral-1882397_1280.jpg"
-      ]
-    };
+    return {};
   }
 };
 </script>

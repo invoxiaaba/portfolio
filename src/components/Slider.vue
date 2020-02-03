@@ -1,25 +1,19 @@
 <template>
-  <div>
-    <transition-group name="fade" tag="div">
-      <div v-for="i in [currentIndex]" :key="i">
-        <img :src="currentImg" />
-      </div>
-    </transition-group>
-    <a class="prev" @click="prev" href="#">&#10094; Previous</a>
-    <a class="next" @click="next" href="#">&#10095; Next</a>
+  <div class="slider">
+    <div v-for="i in [currentIndex]" :key="i">
+      <img :src="currentImg" />
+    </div>
+    <div class="prev" @click="prev"></div>
+    <div class="next" @click="next"></div>
+    <p class="count-slider">{{(currentIndex % this.images.length) +1}} / {{this.images.length}}</p>
   </div>
 </template>
 <script>
 export default {
+  props: ["images"],
   name: "Slider",
   data() {
     return {
-      images: [
-        "https://cdn.pixabay.com/photo/2015/12/12/15/24/amsterdam-1089646_1280.jpg",
-        "https://cdn.pixabay.com/photo/2016/02/17/23/03/usa-1206240_1280.jpg",
-        "https://cdn.pixabay.com/photo/2015/05/15/14/27/eiffel-tower-768501_1280.jpg",
-        "https://cdn.pixabay.com/photo/2016/12/04/19/30/berlin-cathedral-1882397_1280.jpg"
-      ],
       timer: null,
       currentIndex: 0
     };

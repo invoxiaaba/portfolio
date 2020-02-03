@@ -3,8 +3,9 @@ import App from './App.vue'
 import router from './router'
 import VueI18n from 'vue-i18n'
 import moment from 'moment'
+import ScrollAnimation from './directives/scrollanimation'
 
-window.$ = window.jQuery = require('jquery');
+Vue.directive('scrollanimation', ScrollAnimation)
 Vue.config.productionTip = false
 Vue.use(VueI18n);
 
@@ -20,8 +21,6 @@ function loadLocaleMessages() {
   })
   return messages
 }
-
-
 
 let locale = navigator.language.substring(0, 2);
 moment.locale(locale);

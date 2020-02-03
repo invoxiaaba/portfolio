@@ -2,34 +2,90 @@
   <div class="container">
     <div class="nav-projet">
       <router-link class="nav-projet-link" to="/projet1">
-        <div @mouseover="hover1 = true" @mouseleave="hover1 = false">01</div>
+        <div ref="nav1" @mouseover="hover1 = true" @mouseleave="hover1 = false">01</div>
       </router-link>
       <router-link class="nav-projet-link" to="/projet2">
-        <div @mouseover="hover2 = true" @mouseleave="hover2 = false">02</div>
+        <div ref="nav2" @mouseover="hover2 = true" @mouseleave="hover2 = false">02</div>
       </router-link>
       <router-link class="nav-projet-link" to="/projet3">
-        <div @mouseover="hover3 = true" @mouseleave="hover3 = false">03</div>
+        <div ref="nav3" @mouseover="hover3 = true" @mouseleave="hover3 = false">03</div>
       </router-link>
       <router-link class="nav-projet-link" to="/projet4">
-        <div @mouseover="hover4 = true" @mouseleave="hover4 = false">04</div>
+        <div ref="nav4" @mouseover="hover4 = true" @mouseleave="hover4 = false">04</div>
       </router-link>
       <router-link class="nav-projet-link" to="/projet5">
-        <div @mouseover="hover5 = true" @mouseleave="hover5 = false">05</div>
+        <div ref="nav5" @mouseover="hover5 = true" @mouseleave="hover5 = false">05</div>
       </router-link>
     </div>
 
     <div class="container-img">
-      <img class="d-none" :class="{hover: hover1}" src="../assets/img/test.jpg" alt />
-      <img class="d-none" :class="{hover: hover2}" src="../assets/img/test2.jpg" alt />
-      <img class="d-none" :class="{hover: hover3}" src="../assets/img/test.jpg" alt />
-      <img class="d-none" :class="{hover: hover4}" src="../assets/img/test.jpg" alt />
-      <img class="d-none" :class="{hover: hover5}" src="../assets/img/test.jpg" alt />
+      <div class="d-none header-page projet-1" :class="{hover: hover1}"></div>
+      <div class="d-none header-page projet-2" :class="{hover: hover2}"></div>
+      <div class="d-none header-page projet-3" :class="{hover: hover3}"></div>
+      <div class="d-none header-page projet-4" :class="{hover: hover4}"></div>
+      <div class="d-none header-page projet-5" :class="{hover: hover5}"></div>
     </div>
   </div>
 </template>
 
 <script>
+import { TimelineLite, Back } from "gsap";
 export default {
+  mounted() {
+    const { nav1, nav2, nav3, nav4, nav5 } = this.$refs;
+    const timeline = new TimelineLite();
+
+    timeline.from(nav1, 1, {
+      y: 30,
+      opacity: 0,
+      delay: 0.1,
+      ease: Back.easeInOut
+    });
+    timeline.from(
+      nav2,
+      1,
+      {
+        y: 30,
+        opacity: 0,
+        delay: 0.2,
+        ease: Back.easeInOut
+      },
+      "-=1.3"
+    );
+    timeline.from(
+      nav3,
+      1,
+      {
+        y: 30,
+        opacity: 0,
+        delay: 0.3,
+        ease: Back.easeInOut
+      },
+      "-=1.3"
+    );
+    timeline.from(
+      nav4,
+      1,
+      {
+        y: 30,
+        opacity: 0,
+        delay: 0.4,
+        ease: Back.easeInOut
+      },
+      "-=1.3"
+    );
+    timeline.from(
+      nav5,
+      1,
+      {
+        y: 30,
+        opacity: 0,
+        delay: 0.5,
+        ease: Back.easeInOut
+      },
+      "-=1.3"
+    );
+  },
   name: "NavProjet",
   props: {
     msg: String

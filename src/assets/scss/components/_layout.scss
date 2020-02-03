@@ -8,11 +8,12 @@ body {
 h1 {
   margin: 0;
 }
+
 .container {
   position: relative;
   height: 100vh;
   width: 100%;
-  background: black;
+
   @include sm {
     background-color: red;
   }
@@ -41,54 +42,80 @@ section {
 }
 
 .container-home {
-  background-color: black;
+  background: #1b1b1b;
+  overflow-y: hidden;
+  width: 100%;
+  height: 100vh;
 }
 
 .container-projet {
-  background-color: bisque;
   min-height: 100vh;
 }
 
-.container-about {
-  font-family: $secondary-font;
-  font-weight: 300;
-}
+.container-about {}
 
 .desc {
-  font-size: 3vw;
-  font-family: $thrid-font;
-  div {
-    line-height: 130%;
-  }
+  font-size: 1vw;
+  font-family: $secondary-font;
+  font-weight: 100;
+  word-spacing: 1rem;
+  line-height: 170%;
+
   .span {
     position: relative;
     background-color: red;
   }
 }
 
+.is-outline {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+}
+
 .header-projet {
   position: relative;
   width: 100%;
   height: 100vh;
-  z-index: 2;
-  background-image: url("~@/assets/img/test.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-.container-img {
-  img {
-    max-width: 100%;
-    height: 100vh;
-  }
+.header-page {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.container-lang {
-  position: absolute;
-  top: 0;
-  right: 0;
-  font-family: $primary-font;
-  z-index: 11;
+.projet-1 {
+  background-image: url("~@/assets/img/projet1.jpg");
+}
+
+.projet-2 {
+  background-image: url("~@/assets/img/projet1.jpg");
+}
+
+.projet-3 {
+  background-image: url("~@/assets/img/projet1.jpg");
+}
+
+.projet-4 {
+  background-image: url("~@/assets/img/projet1.jpg");
+}
+
+.projet-5 {
+  background-image: url("~@/assets/img/projet1.jpg");
+}
+
+.about {
+  background-image: url("~@/assets/img/me.jpg");
+}
+
+.container-img {
+  img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 /* BORDER */
@@ -121,4 +148,57 @@ section {
   top: calc(100vh - 10px);
   width: 100%;
   height: $border;
+}
+
+.img-bg-plant {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url("~@/assets/img/plant.jpg");
+  background-size: cover;
+
+  &::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: 0px;
+    width: 100%;
+    height: 100vh;
+    background-image: url("~@/assets/img/plant-detail.png");
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+  }
+
+  h1 {
+    @include absolute-position;
+    font-family: $primary-font;
+    font-size: 10vw;
+    color: white;
+    letter-spacing: .4rem;
+  }
+}
+
+.loader-container {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  z-index: 1001;
+
+  animation: loader .7s ease-in-out forwards;
+  animation-delay: 2s;
+  ;
+}
+
+@keyframes loader {
+  0% {
+    height: 100vh;
+  }
+
+  to {
+    height: 0vh;
+  }
 }

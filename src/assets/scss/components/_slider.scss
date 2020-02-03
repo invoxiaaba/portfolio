@@ -1,18 +1,18 @@
 .fade-enter-active,
 .fade-leave-active {
-  transition: all 0.9s ease;
-  overflow: hidden;
-  visibility: visible;
-  position: absolute;
-  width: 100%;
-  opacity: 1;
+  .nav-projet-link {
+    transition: all .8s ease;
+    opacity: 0;
+  }
 }
 
 .fade-enter,
 .fade-leave-to {
-  visibility: hidden;
-  width: 100%;
-  opacity: 0;
+  transition: all .8s ease;
+}
+
+.slider {
+  position: relative;
 }
 
 img {
@@ -22,18 +22,12 @@ img {
 
 .prev,
 .next {
-  cursor: pointer;
   position: absolute;
-  top: 40%;
-  width: auto;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.7s ease;
-  border-radius: 0 4px 4px 0;
-  text-decoration: none;
-  user-select: none;
+  height: 100%;
+  width: 50%;
+  top: 0;
+  cursor: pointer;
+  background-color: transparent;
 }
 
 .next {
@@ -44,7 +38,19 @@ img {
   left: 0;
 }
 
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.9);
+.count-slider {
+  font-family: $primary-font;
+}
+
+/* Scroll animation */
+
+.before-enter {
+  opacity: 0;
+  transform: translateY(-400px);
+  transition: all 2s ease-out;
+}
+
+.enter {
+  opacity: 1;
+  transform: translateY(0);
 }

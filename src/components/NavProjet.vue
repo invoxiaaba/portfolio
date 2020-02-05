@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <CustomCursor />
     <div class="nav-projet">
       <router-link class="nav-projet-link" to="/projet1">
         <div ref="nav1" @mouseover="hover1 = true" @mouseleave="hover1 = false">01</div>
@@ -29,62 +30,10 @@
 </template>
 
 <script>
-import { TimelineLite, Back } from "gsap";
+import CustomCursor from "./CustomCursor";
 export default {
-  mounted() {
-    const { nav1, nav2, nav3, nav4, nav5 } = this.$refs;
-    const timeline = new TimelineLite();
-
-    timeline.from(nav1, 1, {
-      y: 30,
-      opacity: 0,
-      delay: 0.1,
-      ease: Back.easeInOut
-    });
-    timeline.from(
-      nav2,
-      1,
-      {
-        y: 30,
-        opacity: 0,
-        delay: 0.2,
-        ease: Back.easeInOut
-      },
-      "-=1.3"
-    );
-    timeline.from(
-      nav3,
-      1,
-      {
-        y: 30,
-        opacity: 0,
-        delay: 0.3,
-        ease: Back.easeInOut
-      },
-      "-=1.3"
-    );
-    timeline.from(
-      nav4,
-      1,
-      {
-        y: 30,
-        opacity: 0,
-        delay: 0.4,
-        ease: Back.easeInOut
-      },
-      "-=1.3"
-    );
-    timeline.from(
-      nav5,
-      1,
-      {
-        y: 30,
-        opacity: 0,
-        delay: 0.5,
-        ease: Back.easeInOut
-      },
-      "-=1.3"
-    );
+  components: {
+    CustomCursor
   },
   name: "NavProjet",
   props: {

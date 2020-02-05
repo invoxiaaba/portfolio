@@ -1,9 +1,10 @@
 <template>
   <div class="container-about">
+    <CustomCursor />
     <div v-bind:style="{ ['width']: scrollbar() + '%' }" id="mybar"></div>
     <Back />
     <div class="header-page about">
-      <h1 class="text-anim">FRONT END DEVELOPER</h1>
+      <h1 class="text-anim">ADRIEN</h1>
     </div>
     <section>
       <div class="row">
@@ -21,8 +22,8 @@
     <section class="desc">
       <h2>About</h2>
       <div>
-        <div :style="cursorCircle" :class="{newCursor: cursorIsHidden}" class="cursor"></div>
-        <div :style="cursorCircle" :class="{newCursor2: cursorIsHidden2}" class="cursor"></div>
+        <div :style="cursorCircle" :class="{newCursor: cursorIsHidden}" class="cursor-about"></div>
+        <div :style="cursorCircle" :class="{newCursor2: cursorIsHidden2}" class="cursor-about"></div>
 
         <span
           @mouseover="cursorIsHidden = true"
@@ -77,9 +78,12 @@
 
 <script>
 import Back from "../components/Back";
+import CustomCursor from "../components/CustomCursor";
+// import simpleParallax from "simple-parallax-js";
 export default {
   components: {
-    Back
+    Back,
+    CustomCursor
   },
   data() {
     return {
@@ -91,7 +95,7 @@ export default {
       scrolled: 100
     };
   },
-  
+
   computed: {
     cursorCircle() {
       return `transform: translateX(${this.xPage}px) translateY(${this.yPage}px) translateZ(0) translate3d(0, 0, 0);`;
@@ -114,6 +118,13 @@ export default {
       return this.scrolled;
     }
   },
+  // updated() {
+  //   var image = document.getElementsByClassName("text-anim");
+  //   new simpleParallax(image, {
+  //     scale: 1.8
+  //   });
+  // },
+
   mounted() {
     document.addEventListener("mousemove", this.moveCursor);
     window.addEventListener("scroll", this.scrollbar);

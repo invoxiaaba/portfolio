@@ -7,20 +7,22 @@
       <router-link class="nav-prev" to="/projet5">05</router-link>
       <Scroll />
     </header>
-    <section>
-      <p class="desc">
-        Lapetitephoho.C est un projet d'une photographe amateur. À travers ce site, vous pouvez y trouver son Portfolio
-        sous forme de site vitrine. Elle réalise aussi bien des portraits en couleurs qu'en noir et blanc mais aussi des
-        photos de paysages ou d'animaux.
-      </p>
-      <Slider
-        v-bind:images=" 
+    <div class="bg-white">
+      <section>
+        <p class="desc">
+          Lapetitephoho.C est un projet d'une photographe amateur. À travers ce site, vous pouvez y trouver son Portfolio
+          sous forme de site vitrine. Elle réalise aussi bien des portraits en couleurs qu'en noir et blanc mais aussi des
+          photos de paysages ou d'animaux.
+        </p>
+        <Slider
+          v-bind:images=" 
           [
           '/static/img/projet1.jpg',
           '/static/img/projet1.jpg'
            ]"
-      />
-    </section>
+        />
+      </section>
+    </div>
     <Footer />
   </div>
 </template>

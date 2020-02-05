@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <!-- <div class="loader-container"></div> -->
- 
     <div class="nav-lang">
       <input type="radio" id="one" value="fr" :key="fr" v-model="$i18n.locale" />
       <label for="one">FR</label>

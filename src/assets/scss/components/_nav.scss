@@ -37,11 +37,11 @@
   color: white;
 }
 
-.nav-projet:hover>* {
+.nav-projet:hover > * {
   opacity: 0.3;
 }
 
-.nav-projet>a {
+.nav-projet > a {
   &:hover {
     opacity: 1;
   }
@@ -61,11 +61,12 @@
 
   a {
     margin: 2px;
-    color: white;
     text-decoration: none;
     font-family: $thrid-font;
-    font-size: .7rem;
-    letter-spacing: .2px;
+    font-size: 0.7rem;
+    letter-spacing: 0.2px;
+    color: white;
+    mix-blend-mode: difference;
   }
 
   a.router-link-exact-active {
@@ -78,7 +79,7 @@
 .nav-link-01 {
   left: 15%;
   animation: fade-01 1s ease forwards;
-  animation-delay: .8s;
+  animation-delay: 0.8s;
 }
 
 .nav-prev,
@@ -148,10 +149,9 @@
   right: 50px;
 
   font-family: $thrid-font;
-  font-size: .8rem;
+  font-size: 0.8rem;
   color: white;
   mix-blend-mode: difference;
-
 
   z-index: 3;
 }

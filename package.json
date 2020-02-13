@@ -12,6 +12,7 @@
     "greensock": "^1.20.2",
     "gsap": "^3.1.1",
     "jquery": "^3.4.1",
+    "sass-lint-vue": "^0.4.0",
     "simple-parallax-js": "^5.3.0",
     "vue": "^2.6.10",
     "vue-i18n": "^8.15.3",

@@ -1,6 +1,9 @@
+////////////////////////
+// Animation Nav Link //
+///////////////////////
 @keyframes fade-01 {
   from {
-    left: 15%;
+    left: $left-nav-link-01;
   }
 
   to {
@@ -9,6 +12,53 @@
   }
 }
 
+@keyframes fade-02 {
+  from {
+    left: $left-nav-link-02;
+  }
+
+  to {
+    left: 50%;
+    font-size: 300px;
+  }
+}
+
+@keyframes fade-03 {
+  from {
+    left: $left-nav-link-03;
+  }
+
+  to {
+    left: 50%;
+    font-size: 300px;
+  }
+}
+
+@keyframes fade-04 {
+  from {
+    left: $left-nav-link-04;
+  }
+
+  to {
+    left: 50%;
+    font-size: 300px;
+  }
+}
+
+@keyframes fade-05 {
+  from {
+    left: $left-nav-link-05;
+  }
+
+  to {
+    left: 50%;
+    font-size: 300px;
+  }
+}
+
+////////////////////////
+// Animation loader  //
+///////////////////////
 @keyframes rev-block {
 
   0% {
@@ -28,24 +78,12 @@
 
 }
 
-@keyframes cameraPan {
+@keyframes loader {
   0% {
-    background-position: 0% 0%;
+    height: 100vh;
   }
 
-  25% {
-    background-position: 10% 10%;
-  }
-
-  50% {
-    background-position: 0% 10%;
-  }
-
-  75% {
-    background-position: 40% 10%;
-  }
-
-  100% {
-    background-position: 40% 10%;
+  to {
+    height: 0vh;
   }
 }

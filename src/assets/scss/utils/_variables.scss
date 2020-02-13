@@ -1,18 +1,36 @@
-$border: 10px;
-$primary-font: "Anton", sans-serif;
-$secondary-font: titling-gothic-fb-extended, sans-serif;
-$thrid-font: titling-gothic-fb-extended, sans-serif;
+////////////
+// Fonts //
+///////////
+$primary-font:          "Anton", sans-serif;
+$secondary-font:        titling-gothic-fb-extended, sans-serif;
+$thrid-font:            titling-gothic-fb-extended, sans-serif;
 
-$margin: 20px;
+////////////
+// Colors //
+////////////
+$color-white:           #fff;
+$color-black:           #000;
 
+////////////
+// Others //
+////////////
+$width-border:          10px;
+$margin:                20px;
+
+$left-nav-link-01:      18%;
+$left-nav-link-02:      33%;
+$left-nav-link-03:      50%;
+$left-nav-link-04:      68%;
+$left-nav-link-05:      85%;
+
+////////////////
+// Responsive //
+////////////////
 // Small tablets and large smartphones (landscape view)
-$screen-sm-min: 576px;
-
+$screen-sm-min:         576px;
 // Small tablets (portrait view)
-$screen-md-min: 768px;
-
+$screen-md-min:         768px;
 // Tablets and small desktops
-$screen-lg-min: 992px;
-
+$screen-lg-min:         992px;
 // Large tablets and desktops
-$screen-xl-min: 1200px;
+$screen-xl-min:         1200px;

@@ -3,8 +3,8 @@
     <div v-for="i in [currentIndex]" :key="i">
       <img :src="currentImg" />
     </div>
-    <div class="prev" @click="prev"></div>
-    <div class="next" @click="next"></div>
+    <div class="btn-prev" @click="prev"></div>
+    <div class="btn-next" @click="next"></div>
     <p class="count-slider">{{(currentIndex % this.images.length) +1}} / {{this.images.length}}</p>
   </div>
 </template>

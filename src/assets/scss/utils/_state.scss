@@ -11,3 +11,8 @@
   opacity: 1;
   transform: translateY(0px);
 }
+
+.is-outline {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: $color-black;
+}

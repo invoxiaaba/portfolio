@@ -7,5 +7,5 @@ input {
 }
 
 input[type="radio"]:checked + label {
-  color: white;
+  color: $color-white;
 }

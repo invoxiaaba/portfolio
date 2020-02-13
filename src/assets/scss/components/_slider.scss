@@ -1,27 +1,13 @@
-.fade-enter-active,
-.fade-leave-active {
-  .nav-projet-link {
-    transition: all .8s ease;
-    opacity: 0;
+.slider {
+  position: relative;
+  img {
+    height: 100%;
+    width: 100%;
   }
 }
 
-.fade-enter,
-.fade-leave-to {
-  transition: all .8s ease;
-}
-
-.slider {
-  position: relative;
-}
-
-img {
-  height: 600px;
-  width: 100%;
-}
-
-.prev,
-.next {
+.btn-prev,
+.btn-next {
   position: absolute;
   height: 100%;
   width: 50%;
@@ -30,11 +16,11 @@ img {
   background-color: transparent;
 }
 
-.next {
+.btn-next {
   right: 0;
 }
 
-.prev {
+.btn-prev {
   left: 0;
 }
 
@@ -42,15 +28,3 @@ img {
   font-family: $primary-font;
 }
 
-/* Scroll animation */
-
-.before-enter {
-  opacity: 0;
-  transform: translateY(-400px);
-  transition: all 2s ease-out;
-}
-
-.enter {
-  opacity: 1;
-  transform: translateY(0);
-}

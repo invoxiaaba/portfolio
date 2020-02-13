@@ -1,0 +1,30 @@
+////////////////////////
+// Transition Scroll //
+///////////////////////
+.before-enter {
+  opacity: 0;
+  transform: translateY(-100px);
+  transition: all 2s ease-out;
+}
+
+.enter {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+////////////////////////
+// Transition Router //
+///////////////////////
+.fade-enter-active,
+.fade-leave-active {
+  .nav-projet-link,
+  .nav-name {
+    opacity: 0;
+    transition: all 0.8s ease;
+  }
+}
+
+.fade-enter,
+.fade-leave-to {
+  transition: all 0.8s ease;
+}

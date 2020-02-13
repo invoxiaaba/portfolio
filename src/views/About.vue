@@ -3,16 +3,17 @@
     <CustomCursor />
     <div v-bind:style="{ ['width']: scrollbar() + '%' }" id="mybar"></div>
     <Back />
-    <div class="header-page about">
+    <div class="header-page header-profile">
       <h1 class="text-anim">ADRIEN</h1>
     </div>
-    <section class="desc">
+    <section class="p-details">
       <h2>About</h2>
       <div>
         <div :style="cursorCircle" :class="{newCursor: cursorIsHidden}" class="cursor-about"></div>
         <div :style="cursorCircle" :class="{newCursor2: cursorIsHidden2}" class="cursor-about"></div>
 
         <span
+          v-scrollanimation
           @mouseover="cursorIsHidden = true"
           @mouseleave="cursorIsHidden = false"
           class="span"
@@ -33,7 +34,7 @@
     <section>
       <h2>Skill</h2>
       <div class>
-        <p class="p-1">aaaaaaaaaaaaa</p>
+        <p class="p-details">Vue js</p>
       </div>
     </section>
   </div>

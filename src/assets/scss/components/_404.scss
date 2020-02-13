@@ -1,0 +1,30 @@
+.img-bg-plant {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url("~@/assets/img/plant.jpg");
+    background-size: cover;
+  
+    &::before {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      bottom: 0px;
+      width: 100%;
+      height: 100vh;
+      background-image: url("~@/assets/img/plant-detail.png");
+      background-size: contain;
+      background-position: right;
+      background-repeat: no-repeat;
+    }
+  
+    h1 {
+      @include absolute-position;
+      font-family: $primary-font;
+      font-size: 10vw;
+      color: $color-white;
+      letter-spacing: .4rem;
+    }
+  }

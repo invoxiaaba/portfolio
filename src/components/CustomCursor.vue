@@ -8,7 +8,7 @@
 <script>
 import JQuery from "jquery";
 let $ = JQuery;
-import { TimelineLite, Back, TweenMax } from "gsap";
+import { TweenMax } from "gsap";
 export default {
   mounted() {
     var cursor = $(".cursor"),
@@ -46,6 +46,8 @@ export default {
       mouseY = e.clientY;
     });
 
+    // NAV LINK
+
     $(".nav-projet-link").on("mouseenter", function() {
       cursor.addClass("active");
       follower.addClass("active");
@@ -56,59 +58,29 @@ export default {
       follower.removeClass("active");
     });
 
-    const { nav1, nav2, nav3, nav4, nav5 } = this.$refs;
-    const timeline = new TimelineLite();
+    // BTN PREV
 
-    timeline.from(nav1, 1, {
-      y: 30,
-      opacity: 0,
-      delay: 0.1,
-      ease: Back.easeInOut
+    $(".btn-prev").on("mouseenter", function() {
+      cursor.addClass("cursorPrev");
+      follower.addClass("active");
     });
-    timeline.from(
-      nav2,
-      1,
-      {
-        y: 30,
-        opacity: 0,
-        delay: 0.2,
-        ease: Back.easeInOut
-      },
-      "-=1.3"
-    );
-    timeline.from(
-      nav3,
-      1,
-      {
-        y: 30,
-        opacity: 0,
-        delay: 0.3,
-        ease: Back.easeInOut
-      },
-      "-=1.3"
-    );
-    timeline.from(
-      nav4,
-      1,
-      {
-        y: 30,
-        opacity: 0,
-        delay: 0.4,
-        ease: Back.easeInOut
-      },
-      "-=1.3"
-    );
-    timeline.from(
-      nav5,
-      1,
-      {
-        y: 30,
-        opacity: 0,
-        delay: 0.5,
-        ease: Back.easeInOut
-      },
-      "-=1.3"
-    );
+
+    $(".btn-prev").on("mouseleave", function() {
+      cursor.removeClass("cursorPrev");
+      follower.removeClass("active");
+    });
+
+    // BTN NEXT
+
+    $(".btn-next").on("mouseenter", function() {
+      cursor.addClass("cursorNext");
+      follower.addClass("active");
+    });
+
+    $(".btn-next").on("mouseleave", function() {
+      cursor.removeClass("cursorNext");
+      follower.removeClass("active");
+    });
   },
   name: "CustomCursor"
 };

@@ -13,7 +13,7 @@
     top: 20px;
     font-family: $thrid-font;
     font-size: 10px;
-    color: white;
+    color: $color-white;
   }
 
   &::after {
@@ -23,7 +23,7 @@
     position: absolute;
     height: 0%;
     width: 100%;
-    background: white;
+    background: $color-white;
     animation: rev-block 2.3s cubic-bezier(0.19, 1, 0.22, 1) infinite;
     animation-delay: 1s;
   }

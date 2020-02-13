@@ -2,10 +2,10 @@
   <div id="app">
     <!-- <div class="loader-container"></div> -->
     <div class="nav-lang">
-      <input type="radio" id="one" value="fr" :key="fr" v-model="$i18n.locale" />
+      <input type="radio" id="one" value="fr" v-model="$i18n.locale" />
       <label for="one">FR</label>
       <br />
-      <input type="radio" id="two" value="en" :key="en" v-model="$i18n.locale" />
+      <input type="radio" id="two" value="en" v-model="$i18n.locale" />
       <label for="two">EN</label>
     </div>
     <transition name="fade">
@@ -24,7 +24,6 @@ export default {
   components: {},
   data() {
     return {
-      langs: ["fr", "en"]
     };
   }
 };

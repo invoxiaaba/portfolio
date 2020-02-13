@@ -42,20 +42,18 @@ section {
 }
 
 .container-home {
-  background: #1b1b1b;
-  overflow-y: hidden;
   width: 100%;
   height: 100vh;
+  background: #1b1b1b;
+  overflow-y: hidden;
 }
 
 .container-projet {
   min-height: 100vh;
 }
 
-.container-about {}
-
-.desc {
-  font-size: 1vw;
+.p-details {
+  font-size: 16px;
   font-family: $secondary-font;
   font-weight: 100;
   word-spacing: 1rem;
@@ -65,11 +63,6 @@ section {
     position: relative;
     background-color: red;
   }
-}
-
-.is-outline {
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: black;
 }
 
 .header-projet {
@@ -85,6 +78,10 @@ section {
   height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.header-profile {
+  background-image: url("~@/assets/img/me.jpg");
 }
 
 .projet-1 {
@@ -107,10 +104,6 @@ section {
   background-image: url("~@/assets/img/projet1.jpg");
 }
 
-.about {
-  background-image: url("~@/assets/img/me.jpg");
-}
-
 .container-img {
   img {
     width: 100%;
@@ -122,9 +115,9 @@ section {
 
 .border {
   position: fixed;
-  width: $border;
+  width: $width-border;
   height: 100vh;
-  background-color: white;
+  background-color: $color-white;
   z-index: 999;
 }
 
@@ -141,68 +134,31 @@ section {
 .border-top {
   top: 0;
   width: 100%;
-  height: $border;
+  height: $width-border;
 }
 
 .border-bottom {
   top: calc(100vh - 10px);
   width: 100%;
-  height: $border;
+  height: $width-border;
 }
 
-.img-bg-plant {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  background-image: url("~@/assets/img/plant.jpg");
-  background-size: cover;
+// .loader-container {
+//   position: fixed;
+//   width: 100%;
+//   height: 100vh;
+//   background-color: $color-black;
+//   z-index: 1001;
 
-  &::before {
-    content: '';
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    bottom: 0px;
-    width: 100%;
-    height: 100vh;
-    background-image: url("~@/assets/img/plant-detail.png");
-    background-size: contain;
-    background-position: right;
-    background-repeat: no-repeat;
-  }
-
-  h1 {
-    @include absolute-position;
-    font-family: $primary-font;
-    font-size: 10vw;
-    color: white;
-    letter-spacing: .4rem;
-  }
-}
-
-.loader-container {
-  position: fixed;
-  width: 100%;
-  height: 100vh;
-  background-color: black;
-  z-index: 1001;
-
-  animation: loader .7s ease-in-out forwards;
-  animation-delay: 2s;
-  ;
-}
+//   animation: loader .7s ease-in-out forwards;
+//   animation-delay: 2s;
+//   ;
+// }
 
 .bg-white {
-  background: white;
+  background: $color-white;
 }
 
-@keyframes loader {
-  0% {
-    height: 100vh;
-  }
-
-  to {
-    height: 0vh;
-  }
+::selection {
+  background: #ffb7b7;
 }

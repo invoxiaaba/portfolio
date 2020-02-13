@@ -6,19 +6,6 @@
     <div class="header-page about">
       <h1 class="text-anim">ADRIEN</h1>
     </div>
-    <section>
-      <div class="row">
-        <div class="col-6">Adrien bannwarth</div>
-        <div class="col-6">front developer</div>
-      </div>
-    </section>
-    <section>
-      <div class="row">
-        <div class="col-4">How long ?</div>
-        <div class="col-4">What ?</div>
-        <div class="col-4">When ?</div>
-      </div>
-    </section>
     <section class="desc">
       <h2>About</h2>
       <div>
@@ -41,30 +28,6 @@
         dolor, sit amet consectetur adipisicing elit. Praesentium doloribus, corrupti soluta impedit eos quasi mollitia maxime,
         nihil eius perspiciatis molestias quos accusamus nisi necessitatibus dolore numquam, sapiente velit sit.
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium doloribus, corrupti soluta impedit eos quasi mollitia maxime,
-      </div>
-    </section>
-    <section>
-      <h2>Expériences</h2>
-      <div class="row">
-        <div class="col-3">HETIC</div>
-        <div class="col-3">Student</div>
-        <div v-scrollanimation class="col-6">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia magnam dolorem nam rerum dolore maiores repellendus culpa id r
-          epudiandae tenetur beatae dignissimos optio,
-          error necessitatibus, quibusdam praesentium quidem ullam vel?
-        </div>
-      </div>
-
-      <div class="br"></div>
-
-      <div class="row">
-        <div class="col-3">DUT MMI</div>
-        <div class="col-3">Student</div>
-        <div class="col-6">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia magnam dolorem nam rerum dolore maiores repellendus culpa id r
-          epudiandae tenetur beatae dignissimos optio,
-          error necessitatibus, quibusdam praesentium quidem ullam vel?
-        </div>
       </div>
     </section>
     <section>

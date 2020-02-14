@@ -17,14 +17,12 @@
 ///////////////////////
 .fade-enter-active,
 .fade-leave-active {
-  position: absolute;
-  .nav-projet-link,
-  .nav-name {
+  // position: absolute;
+  .nav-projet-link {
     opacity: 0;
     transition: all 0.8s ease;
   }
 }
-
 .fade-enter,
 .fade-leave-to {
   transition: all 0.8s ease;

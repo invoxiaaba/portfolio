@@ -56,8 +56,12 @@ export default {
     };
   },
   mounted() {
-    const { nav1, nav2, nav3, nav4, nav5 } = this.$refs;
     const {
+      nav1,
+      nav2,
+      nav3,
+      nav4,
+      nav5,
       navTitle1,
       navTitle2,
       navTitle3,

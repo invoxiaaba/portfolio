@@ -5,7 +5,7 @@
     <BtnBack />
     <div class="header-page header-profil">
       <h1 ref="titleProfile" class="h1-profil">Adrien</h1>
-      <h2 ref="subtitleProfile" class="h2-profil">Front end develop</h2>
+      <h2 ref="subtitleProfile" class="h2-profil">Front end developer</h2>
     </div>
     <section class="p-details" v-scrollanimation>
       <div>

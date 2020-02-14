@@ -1,8 +1,10 @@
 <template>
   <div class="slider">
-    <div v-for="i in [currentIndex]" :key="i">
-      <img :src="currentImg" />
-    </div>
+    <!-- <transition-group name="fade" tag="div"> -->
+      <div v-for="i in [currentIndex]" :key="i">
+        <img :src="currentImg" />
+      </div>
+    <!-- </transition-group> -->
     <div class="btn-prev" @click="prev"></div>
     <div class="btn-next" @click="next"></div>
     <p class="count-slider">{{(currentIndex % this.images.length) +1}} / {{this.images.length}}</p>
@@ -24,9 +26,9 @@ export default {
   },
 
   methods: {
-    startSlide: function() {
-      this.timer = setInterval(this.next, 4000);
-    },
+    // startSlide: function() {
+    //   this.timer = setInterval(this.next, 4000);
+    // },
 
     next: function() {
       this.currentIndex += 1;

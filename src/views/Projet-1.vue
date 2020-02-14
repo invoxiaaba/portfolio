@@ -1,7 +1,7 @@
 <template>
   <div class="container-projet">
     <CustomCursor />
-    <Back />
+    <BtnBack />
     <header class="header-projet projet-1">
       <a class="nav-projet-link nav-link-01">01</a>
       <router-link class="nav-next" to="/projet2">O2</router-link>
@@ -32,7 +32,7 @@
 import Slider from "../components/Slider.vue";
 import Footer from "../components/FooterProjet";
 import Scroll from "../components/Scroll";
-import Back from "../components/Back";
+import BtnBack from "../components/BtnBack";
 import CustomCursor from "../components/CustomCursor";
 export default {
   name: "projet1",
@@ -40,7 +40,7 @@ export default {
     Slider,
     Footer,
     Scroll,
-    Back,
+    BtnBack,
     CustomCursor
   },
   data() {

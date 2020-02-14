@@ -1,7 +1,7 @@
 <template>
   <div class="container-projet">
     <CustomCursor />
-    <Back />
+    <BtnBack />
     <header class="header-projet projet-5">
       <a class="nav-projet-link nav-link-05">05</a>
       <router-link class="nav-next" to="/projet1">O1</router-link>
@@ -30,7 +30,7 @@
 
 <script>
 import Slider from "../components/Slider";
-import Back from "../components/Back";
+import BtnBack from "../components/BtnBack";
 import Footer from "../components/FooterProjet";
 import CustomCursor from "../components/CustomCursor";
 
@@ -38,7 +38,7 @@ export default {
   name: "projet5",
   components: {
     Slider,
-    Back,
+    BtnBack,
     Footer,
     CustomCursor
   },

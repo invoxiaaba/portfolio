@@ -1,4 +1,6 @@
-/* CURSOR */
+//////////////
+// CURSOR  //
+/////////////
 .cursor-about {
   position: fixed;
   pointer-events: none;
@@ -9,8 +11,9 @@
   left: -30px;
 }
 
-// cursor about
-
+//////////////////
+// Cursor About //
+//////////////////
 .newCursor {
   width: 150px;
   background-image: url("~@/assets/img/projet1.jpg");
@@ -18,8 +21,9 @@
   transition: width 0.4s ease;
 }
 
-// cursor project
-
+///////////////////
+// Cursor Projet //
+///////////////////
 .cursor {
   position: fixed;
   background: $color-white;
@@ -78,16 +82,17 @@
   transform: scale(0);
 }
 
-// cursor Slider
-
+///////////////////
+// Cursor Slider //
+///////////////////
 .cursor.cursorPrev {
   opacity: 1;
   transform: scale(8);
   transition: 0.6s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform, 0.4s cubic-bezier(0.75, -1.27, 0.3, 2.33) opacity;
-  background-image: url("http://mirkozeppieri.emanuelepapale.com/wp-content/uploads/2018/07/project-hover-cursor.jpg");
+  background-image: url("~@/assets/img/left.png");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 75%;
   z-index: 100;
 }
 
@@ -95,9 +100,9 @@
   opacity: 1;
   transform: scale(8);
   transition: 0.6s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform, 0.4s cubic-bezier(0.75, -1.27, 0.3, 2.33) opacity;
-  background-image: url("http://mirkozeppieri.emanuelepapale.com/wp-content/uploads/2018/07/project-hover-cursor.jpg");
+  background-image: url("~@/assets/img/right.png");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 75%;
   z-index: 100;
 }

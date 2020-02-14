@@ -1,7 +1,8 @@
 .slider {
   position: relative;
+  height: 650px;
+  width: 100%;
   img {
-    height: 100%;
     width: 100%;
   }
 }
@@ -27,4 +28,3 @@
 .count-slider {
   font-family: $primary-font;
 }
-

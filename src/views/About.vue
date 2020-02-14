@@ -1,19 +1,18 @@
 <template>
   <div class="container-about">
     <CustomCursor />
-    <div v-bind:style="{ ['width']: scrollbar() + '%' }" id="mybar"></div>
-    <Back />
-    <div class="header-page header-profile">
-      <h1 class="text-anim">ADRIEN</h1>
+    <!-- <div v-bind:style="{ ['width']: scrollbar() + '%' }" id="mybar"></div> -->
+    <BtnBack />
+    <div class="header-page header-profil">
+      <h1 ref="titleProfile" class="h1-profil">Adrien</h1>
+      <h2 ref="subtitleProfile" class="h2-profil">Front end develop</h2>
     </div>
-    <section class="p-details">
-      <h2>About</h2>
+    <section class="p-details" v-scrollanimation>
       <div>
         <div :style="cursorCircle" :class="{newCursor: cursorIsHidden}" class="cursor-about"></div>
         <div :style="cursorCircle" :class="{newCursor2: cursorIsHidden2}" class="cursor-about"></div>
 
         <span
-          v-scrollanimation
           @mouseover="cursorIsHidden = true"
           @mouseleave="cursorIsHidden = false"
           class="span"
@@ -31,23 +30,35 @@
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium doloribus, corrupti soluta impedit eos quasi mollitia maxime,
       </div>
     </section>
-    <section>
-      <h2>Skill</h2>
-      <div class>
-        <p class="p-details">Vue js</p>
+    <section class="p-details">
+      <div class="row-column">
+        <p v-scrollanimation class="p-skill">Vue JS</p>
+        <p class="p-skill">React JS</p>
+        <p class="p-skill">React native</p>
+        <p class="p-skill">GSAP</p>
+        <p class="p-skill">SASS</p>
+        <p class="p-skill">Wordpress</p>
+        <p class="p-skill">Node JS</p>
+        <p class="p-skill">Github</p>
+        <p class="p-skill">SEO</p>
       </div>
     </section>
+    <FooterProfil />
   </div>
 </template>
 
 <script>
-import Back from "../components/Back";
+import BtnBack from "../components/BtnBack";
 import CustomCursor from "../components/CustomCursor";
-// import simpleParallax from "simple-parallax-js";
+import FooterProfil from "../components/FooterProfil";
+
+import { TimelineLite, Back } from "gsap";
+
 export default {
   components: {
-    Back,
-    CustomCursor
+    BtnBack,
+    CustomCursor,
+    FooterProfil
   },
   data() {
     return {
@@ -82,16 +93,31 @@ export default {
       return this.scrolled;
     }
   },
-  // updated() {
-  //   var image = document.getElementsByClassName("text-anim");
-  //   new simpleParallax(image, {
-  //     scale: 1.8
-  //   });
-  // },
 
   mounted() {
     document.addEventListener("mousemove", this.moveCursor);
     window.addEventListener("scroll", this.scrollbar);
+
+    const { titleProfile, subtitleProfile } = this.$refs;
+    const timeline = new TimelineLite();
+
+    timeline.from(titleProfile, 1, {
+      y: 30,
+      opacity: 0,
+      delay: 1.5,
+      ease: Back.easeInOut
+    });
+    timeline.from(
+      subtitleProfile,
+      1,
+      {
+        y: 30,
+        opacity: 0,
+        delay: 1.5,
+        ease: Back.easeInOut
+      },
+      "-=2"
+    );
   }
 };
 </script>

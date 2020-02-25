@@ -13,7 +13,7 @@
         <p
           class="p-details"
         >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error iusto debitis ut beatae? Aut dolore veniam soluta quaerat numquam fuga. Facilis optio accusamus voluptates sit, tempore id aut blanditiis nostrum.</p>
-        <Slider
+        <!-- <Slider
           v-bind:images="
           [
         'https://cdn.pixabay.com/photo/2015/12/12/15/24/amsterdam-1089646_1280.jpg',
@@ -21,7 +21,10 @@
         'https://cdn.pixabay.com/photo/2015/05/15/14/27/eiffel-tower-768501_1280.jpg',
         'https://cdn.pixabay.com/photo/2016/12/04/19/30/berlin-cathedral-1882397_1280.jpg'
            ]"
-        />
+        />-->
+        <img class="img-details" src="../assets/img/projet5/bellybump1.png" />
+        <br />
+        <img class="img-details" src="../assets/img/projet5/maquette_bellybump.jpg" />
       </section>
     </div>
     <Footer />
@@ -29,7 +32,7 @@
 </template>
 
 <script>
-import Slider from "../components/Slider";
+// import Slider from "../components/Slider";
 import BtnBack from "../components/BtnBack";
 import Footer from "../components/FooterProjet";
 import CustomCursor from "../components/CustomCursor";
@@ -37,7 +40,7 @@ import CustomCursor from "../components/CustomCursor";
 export default {
   name: "projet5",
   components: {
-    Slider,
+    // Slider,
     BtnBack,
     Footer,
     CustomCursor

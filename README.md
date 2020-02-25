@@ -27,7 +27,7 @@ sass-lint 'src/assets/scss/components/*.scss' -v -q
 
 ### Vue Eslint 
 ```
-$ npx eslint pages/src   
+$ npx eslint src/views/*.vue
 ```
 
 ### Customize configuration

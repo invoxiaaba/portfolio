@@ -61,24 +61,24 @@ export default {
     // BTN PREV
 
     $(".btn-prev").on("mouseenter", function() {
-      cursor.addClass("cursorPrev");
+      cursor.addClass("cursor-prev");
       follower.addClass("active");
     });
 
     $(".btn-prev").on("mouseleave", function() {
-      cursor.removeClass("cursorPrev");
+      cursor.removeClass("cursor-prev");
       follower.removeClass("active");
     });
 
     // BTN NEXT
 
     $(".btn-next").on("mouseenter", function() {
-      cursor.addClass("cursorNext");
+      cursor.addClass("cursor-next");
       follower.addClass("active");
     });
 
     $(".btn-next").on("mouseleave", function() {
-      cursor.removeClass("cursorNext");
+      cursor.removeClass("cursor-next");
       follower.removeClass("active");
     });
   },

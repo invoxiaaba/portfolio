@@ -10,11 +10,13 @@
 .btn-prev,
 .btn-next {
   position: absolute;
-  height: 100%;
-  width: 50%;
   top: 0;
-  cursor: pointer;
+  width: 50%;
+  height: 100%;
+
   background-color: transparent;
+  
+  cursor: pointer;
 }
 
 .btn-next {

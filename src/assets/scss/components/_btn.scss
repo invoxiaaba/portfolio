@@ -6,6 +6,6 @@ input {
   display: none;
 }
 
-input[type="radio"]:checked + label {
+input[type='radio']:checked + label {
   color: $color-white;
 }

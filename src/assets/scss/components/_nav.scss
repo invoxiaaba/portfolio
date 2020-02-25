@@ -1,8 +1,9 @@
 /* PROJET NAV */
 
 .nav-projet {
-  width: 100%;
   z-index: 10;
+  width: 100%;
+
   @include absolute-position;
 
   a:nth-child(1) {
@@ -29,12 +30,14 @@
 .nav-projet-link {
   position: absolute;
   top: 50%;
-  transition: 1s ease-in-out;
+
   transform: translate(-50%, -50%);
-  font-size: 8vw;
-  font-family: $primary-font;
-  text-decoration: none;
+  transition: 1s ease-in-out;
+
   color: $color-white;
+  font-family: $primary-font;
+  font-size: 8vw;
+  text-decoration: none;
 }
 
 .nav-projet:hover > * {
@@ -50,10 +53,9 @@
 .nav-name {
   @include absolute-position;
   top: 90%;
-  font-size: 10px;
   font-family: $secondary-font;
+  font-size: 10px;
   white-space: nowrap;
-
 }
 
 /* VIEW PROJET DETAIL */
@@ -93,10 +95,11 @@
   @include absolute-position;
   position: fixed;
   z-index: 11;
-  font-family: $primary-font;
+
   color: $color-white;
-  mix-blend-mode: difference;
+  font-family: $primary-font;
   text-decoration: none;
+  mix-blend-mode: difference;
 }
 
 .nav-prev {
@@ -112,12 +115,13 @@
 .nav-lang {
   display: flex;
   position: absolute;
-  bottom: $margin;
-  right: $margin;
-  padding: 20px;
-  font-size: 10px;
-  font-family: $thrid-font;
   z-index: 11;
+  right: $margin;
+  bottom: $margin;
+  padding: 20px;
+
+  font-family: $thrid-font;
+  font-size: 10px;
 
   label {
     margin: 5px;
@@ -131,19 +135,20 @@
 /* Footer nav projet */
 
 .nav-footer-projet {
-  width: calc(100% - 100px);
-  padding: 0 50px;
   display: flex;
-  justify-content: space-around;
   align-items: center;
+  justify-content: space-around;
+  width: calc(100% - 100px);
   height: 300px;
+  padding: 0 50px;
+
   background-color: $color-black;
 
   a {
     color: $color-white;
-    text-decoration: none;
     font-family: $primary-font;
     font-size: 7vw;
+    text-decoration: none;
   }
 }
 
@@ -152,13 +157,13 @@
 .nav-back,
 .nav-prolife {
   position: fixed;
+  z-index: 3;
   top: 50px;
   right: 50px;
 
+  color: $color-white;
   font-family: $thrid-font;
   font-size: 0.8rem;
-  color: $color-white;
-  mix-blend-mode: difference;
 
-  z-index: 3;
+  mix-blend-mode: difference;
 }

@@ -2,7 +2,7 @@ const animationScrollObserver = new IntersectionObserver(
   (entries, animationScrollObserver) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('enter');
+        entry.target.classList.add("enter");
         animationScrollObserver.unobserve(entry.target);
       }
     });
@@ -11,7 +11,7 @@ const animationScrollObserver = new IntersectionObserver(
 
 export default {
   bind(el) {
-    el.classList.add('before-enter');
+    el.classList.add("before-enter");
     animationScrollObserver.observe(el);
   }
-}
+};

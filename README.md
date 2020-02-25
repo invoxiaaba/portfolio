@@ -20,5 +20,15 @@ npm run build
 npm run lint
 ```
 
+### Sass lint
+```
+sass-lint 'src/assets/scss/components/*.scss' -v -q
+```
+
+### Vue Eslint 
+```
+$ npx eslint src/views/*.vue
+```
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).

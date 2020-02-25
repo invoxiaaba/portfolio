@@ -5,7 +5,9 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "sasslint": "sass-lint 'src/assets/scss/components/*.scss' -v -q",
+    "vuelint": "$ npx eslint src/**/*.vue"
   },
   "dependencies": {
     "core-js": "^3.4.4",

@@ -1,12 +1,12 @@
 <template>
-  <div class="viewport">
-    <div id="scroll-container" class="container-projet scroll-container">
+  <div class="viewportt">
+    <div id="scroll-containerr" class="container-projet scroll-containerr">
       <CustomCursor />
       <BtnBack />
-      <header class="header-projet projet-5">
-        <a class="nav-projet-link nav-link-05">05</a>
-        <router-link class="nav-next" to="/projet1">O1</router-link>
-        <router-link class="nav-prev" to="/projet4">04</router-link>
+      <header class="header-projet" :class="img_bg">
+        <a class="nav-projet-link" :class="nav_link_05">{{nav_active}}</a>
+        <router-link class="nav-next" :to="link_next">{{nav_next}}</router-link>
+        <router-link class="nav-prev" :to="link_prev">{{nav_prev}}</router-link>
         <Scroll />
       </header>
       <div class="bg-white">
@@ -14,27 +14,18 @@
           <div class="flex">
             <div class="col-4 pd-20">
               <p class="title-desc">Role</p>
-              <p class="p-desc">Front end Development</p>
+              <p class="p-desc">{{text_role}}</p>
               <br />
               <p class="title-desc">Client</p>
-              <p class="p-desc">School work</p>
+              <p class="p-desc">{{text_client}}</p>
               <br />
               <p class="title-desc">Website</p>
-              <p class="p-desc">bellybump.fr</p>
+              <p class="p-desc">{{text_website}}</p>
             </div>
             <div class="col-4 pd-20">
-              <p class="p-desc">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error iusto debitis ut beatae? Aut dolore veniam soluta quaerat
-                numquam fuga. Facilis optio accusamus voluptates sit, tempore id aut blanditiis nostrum.
-              </p>
+              <p class="p-desc">{{text_desc}}</p>
             </div>
           </div>
-
-          <!-- <div class="flex">
-          <div class="col-4 rect bg-pink">
-            <img class="img-detail-sm" src="../assets/img/projet5/mobile-bellybump.png" />
-          </div>
-          </div>-->
         </section>
       </div>
       <Footer />
@@ -50,7 +41,20 @@ import CustomCursor from "../components/CustomCursor";
 import { TweenLite } from "gsap";
 
 export default {
-  name: "projet5",
+  name: "TemplateProject",
+  props: [
+    "nav_active",
+    "nav_link_05",
+    "nav_next",
+    "link_next",
+    "nav_prev",
+    "link_prev",
+    "text_role",
+    "text_client",
+    "text_website",
+    "text_desc",
+    "img_bg"
+  ],
   components: {
     BtnBack,
     Footer,

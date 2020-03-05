@@ -9,22 +9,31 @@
       <Scroll />
     </header>
     <div class="bg-white">
-      <section>
-        <p
-          class="p-details"
-        >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error iusto debitis ut beatae? Aut dolore veniam soluta quaerat numquam fuga. Facilis optio accusamus voluptates sit, tempore id aut blanditiis nostrum.</p>
-        <!-- <Slider
-          v-bind:images="
-          [
-        'https://cdn.pixabay.com/photo/2015/12/12/15/24/amsterdam-1089646_1280.jpg',
-        'https://cdn.pixabay.com/photo/2016/02/17/23/03/usa-1206240_1280.jpg',
-        'https://cdn.pixabay.com/photo/2015/05/15/14/27/eiffel-tower-768501_1280.jpg',
-        'https://cdn.pixabay.com/photo/2016/12/04/19/30/berlin-cathedral-1882397_1280.jpg'
-           ]"
-        />-->
-        <img class="img-details" src="../assets/img/projet5/bellybump1.png" />
-        <br />
-        <img class="img-details" src="../assets/img/projet5/maquette_bellybump.jpg" />
+      <section class="container-details-projet">
+        <div class="flex">
+          <div class="col-4 pd-20">
+            <p class="title-desc">Role</p>
+            <p class="p-desc">Front end Development</p>
+            <br />
+            <p class="title-desc">Client</p>
+            <p class="p-desc">School work</p>
+            <br />
+            <p class="title-desc">Website</p>
+            <p class="p-desc">bellybump.fr</p>
+          </div>
+          <div class="col-4 pd-20">
+            <p class="p-desc">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error iusto debitis ut beatae? Aut dolore veniam soluta quaerat
+              numquam fuga. Facilis optio accusamus voluptates sit, tempore id aut blanditiis nostrum.
+            </p>
+          </div>
+        </div>
+
+        <!-- <div class="flex">
+          <div class="col-4 rect bg-pink">
+            <img class="img-detail-sm" src="../assets/img/projet5/mobile-bellybump.png" />
+          </div>
+        </div> -->
       </section>
     </div>
     <Footer />
@@ -32,7 +41,6 @@
 </template>
 
 <script>
-// import Slider from "../components/Slider";
 import BtnBack from "../components/BtnBack";
 import Footer from "../components/FooterProjet";
 import CustomCursor from "../components/CustomCursor";
@@ -40,7 +48,6 @@ import CustomCursor from "../components/CustomCursor";
 export default {
   name: "projet5",
   components: {
-    // Slider,
     BtnBack,
     Footer,
     CustomCursor

@@ -1,7 +1,7 @@
 <template>
   <div class="container container-home">
     <router-link to="/about">
-      <div ref="profile" class="nav-prolife">{{$t('about')}}</div>
+      <div ref="profile" class="nav-prolife">About</div>
     </router-link>
     <NavProjet />
   </div>

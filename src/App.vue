@@ -1,13 +1,13 @@
 <template>
   <div id="app">
     <!-- <div class="loader-container"></div> -->
-    <div class="nav-lang">
+    <!-- <div class="nav-lang">
       <input type="radio" id="one" value="fr" v-model="$i18n.locale" />
       <label for="one">FR</label>
       <br />
       <input type="radio" id="two" value="en" v-model="$i18n.locale" />
       <label for="two">EN</label>
-    </div>
+    </div> -->
     <transition name="fade">
       <router-view></router-view>
     </transition>
@@ -23,8 +23,7 @@ export default {
   name: "App",
   components: {},
   data() {
-    return {
-    };
+    return {};
   }
 };
 </script>

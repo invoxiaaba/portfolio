@@ -6,8 +6,10 @@
     <div class="header-page header-profil">
       <h1 ref="titleProfile" class="h1-profil">Adrien</h1>
       <h2 ref="subtitleProfile" class="h2-profil">Front end developer</h2>
+      <Scroll />
     </div>
-    <section class="p-details" v-scrollanimation>
+
+    <section v-scrollanimation class="p-details">
       <div>
         <div :style="cursorCircle" :class="{newCursor: cursorIsHidden}" class="cursor-about"></div>
         <div :style="cursorCircle" :class="{newCursor2: cursorIsHidden2}" class="cursor-about"></div>
@@ -33,14 +35,14 @@
     <section class="p-details">
       <div class="row-column">
         <p v-scrollanimation class="p-skill">Vue JS</p>
-        <p class="p-skill">React JS</p>
-        <p class="p-skill">React native</p>
-        <p class="p-skill">GSAP</p>
-        <p class="p-skill">SASS</p>
-        <p class="p-skill">Wordpress</p>
-        <p class="p-skill">Node JS</p>
-        <p class="p-skill">Github</p>
-        <p class="p-skill">SEO</p>
+        <p v-scrollanimation class="p-skill">React JS</p>
+        <p v-scrollanimation class="p-skill">React native</p>
+        <p v-scrollanimation class="p-skill">GSAP</p>
+        <p v-scrollanimation class="p-skill">SASS</p>
+        <p v-scrollanimation class="p-skill">Wordpress</p>
+        <p v-scrollanimation class="p-skill">Node JS</p>
+        <p v-scrollanimation class="p-skill">Github</p>
+        <p v-scrollanimation class="p-skill">SEO</p>
       </div>
     </section>
     <FooterProfil />
@@ -48,6 +50,7 @@
 </template>
 
 <script>
+import Scroll from "../components/Scroll";
 import BtnBack from "../components/BtnBack";
 import CustomCursor from "../components/CustomCursor";
 import FooterProfil from "../components/FooterProfil";
@@ -56,6 +59,7 @@ import { TimelineLite, Back } from "gsap";
 
 export default {
   components: {
+    Scroll,
     BtnBack,
     CustomCursor,
     FooterProfil

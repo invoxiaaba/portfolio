@@ -95,6 +95,9 @@ section {
   justify-content: center;
 }
 
+.col-12 {
+  width: 100%;
+}
 .col-8 {
   width: 60%;
 }
@@ -270,6 +273,10 @@ section {
   background: $color-white;
 }
 
+.bg-grey {
+  background: $color-grey;
+}
+
 ::selection {
   background: #ffb7b7;
 }
@@ -321,4 +328,25 @@ section {
   position: relative;
 
   background-color: #f5cbbf;
+}
+
+.box {
+  width: 80%;
+  position: relative;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+  }
+
+  .overlay {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: $color-grey;
+  }
 }

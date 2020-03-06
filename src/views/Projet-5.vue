@@ -1,6 +1,6 @@
 <template>
-  <div class="viewport">
-    <div id="scroll-container" class="container-projet scroll-container">
+  <div class>
+    <div class="container-projet">
       <CustomCursor />
       <BtnBack />
       <header class="header-projet projet-5">
@@ -9,7 +9,7 @@
         <router-link class="nav-prev" to="/projet4">04</router-link>
         <Scroll />
       </header>
-      <div class="bg-white">
+      <div class="bg-grey">
         <section class="container-details-projet">
           <div class="flex">
             <div class="col-4 pd-20">
@@ -28,13 +28,15 @@
                 numquam fuga. Facilis optio accusamus voluptates sit, tempore id aut blanditiis nostrum.
               </p>
             </div>
+            <div class="col-12 box">
+              <img src="../assets/img/bellybump.jpg" alt="bellybump" />
+              <div class="overlay"></div>
+            </div>
+            <div class="col-12 box">
+              <img src="../assets/img/projet5/maquette_bellybump.jpg" alt="bellybump" />
+              <div class="overlay"></div>
+            </div>
           </div>
-
-          <!-- <div class="flex">
-          <div class="col-4 rect bg-pink">
-            <img class="img-detail-sm" src="../assets/img/projet5/mobile-bellybump.png" />
-          </div>
-          </div>-->
         </section>
       </div>
       <Footer />
@@ -47,7 +49,7 @@ import BtnBack from "../components/BtnBack";
 import Footer from "../components/FooterProjet";
 import CustomCursor from "../components/CustomCursor";
 
-import { TweenLite } from "gsap";
+import { TimelineMax, Power4 } from "gsap";
 
 export default {
   name: "projet5",
@@ -61,76 +63,22 @@ export default {
   },
 
   mounted() {
-    var html = document.documentElement;
-    var body = document.body;
+    var animateIn = new TimelineMax();
 
-    var scroller = {
-      target: document.querySelector("#scroll-container"),
-      ease: 0.05, // <= scroll speed
-      endY: 0,
-      y: 0,
-      resizeRequest: 1,
-      scrollRequest: 0
-    };
-
-    var requestId = null;
-
-    TweenLite.set(scroller.target, {
-      rotation: 0.01,
-      force3D: true
-    });
-
-    window.addEventListener("load", onLoad);
-
-    function onLoad() {
-      updateScroller();
-      window.focus();
-      window.addEventListener("resize", onResize);
-      document.addEventListener("scroll", onScroll);
-    }
-
-    function updateScroller() {
-      var resized = scroller.resizeRequest > 0;
-
-      if (resized) {
-        var height = scroller.target.clientHeight;
-        body.style.height = height + "px";
-        scroller.resizeRequest = 0;
+    animateIn.fromTo(
+      ".overlay",
+      2,
+      {
+        skewX: 30,
+        scale: 1.5
+      },
+      {
+        skewX: 0,
+        xPercent: 100,
+        transformOrigin: "0% 100%",
+        ease: Power4.easeOut
       }
-
-      var scrollY = window.pageYOffset || html.scrollTop || body.scrollTop || 0;
-
-      scroller.endY = scrollY;
-      scroller.y += (scrollY - scroller.y) * scroller.ease;
-
-      if (Math.abs(scrollY - scroller.y) < 0.05 || resized) {
-        scroller.y = scrollY;
-        scroller.scrollRequest = 0;
-      }
-
-      TweenLite.set(scroller.target, {
-        y: -scroller.y
-      });
-
-      requestId =
-        scroller.scrollRequest > 0
-          ? requestAnimationFrame(updateScroller)
-          : null;
-    }
-
-    function onScroll() {
-      scroller.scrollRequest++;
-      if (!requestId) {
-        requestId = requestAnimationFrame(updateScroller);
-      }
-    }
-
-    function onResize() {
-      scroller.resizeRequest++;
-      if (!requestId) {
-        requestId = requestAnimationFrame(updateScroller);
-      }
-    }
+    );
   }
 };
 </script>

@@ -1,5 +1,6 @@
 <template>
   <TemplateProject
+    text_name="bellybump"
     nav_active="01"
     nav_link_05="nav-link-01"
     nav_next="02"

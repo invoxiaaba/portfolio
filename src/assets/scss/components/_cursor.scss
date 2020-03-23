@@ -21,7 +21,7 @@
 
   transition: width 0.4s ease;
 
-  background-image: url('~@/assets/img/projet1.jpg');
+  background-image: url('~@/assets/img/lapetitephotoc.jpg');
   background-size: cover;
 }
 
@@ -42,6 +42,10 @@
   pointer-events: none;
   user-select: none;
   // mix-blend-mode: difference;
+
+  @include md {
+    display: none;
+  }
 }
 
 .cursor::before {
@@ -60,6 +64,10 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
+  @include md {
+    display: none;
+  }
 }
 
 .cursor.active {
@@ -68,10 +76,18 @@
   transform: scale(8);
 
   opacity: 1;
+
+  @include md {
+    display: none;
+  }
 }
 
 .cursor.active::before {
   opacity: 1;
+
+  @include md {
+    display: none;
+  }
 }
 
 .cursor-follower {
@@ -89,12 +105,20 @@
 
   pointer-events: none;
   user-select: none;
+
+  @include md {
+    display: none;
+  }
 }
 
 .cursor-follower.active {
   transform: scale(0);
 
   opacity: 0.3;
+
+  @include md {
+    display: none;
+  }
 }
 
 ///////////////////
@@ -107,10 +131,15 @@
   transition: 0.6s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform, 0.4s cubic-bezier(0.75, -1.27, 0.3, 2.33) opacity;
 
   opacity: 1;
+  background: $color-white;
   background-image: url('~@/assets/img/left.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: 75%;
+
+  @include md {
+    display: none;
+  }
 }
 
 .cursor.cursor-next {
@@ -125,4 +154,8 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: 75%;
+
+  @include md {
+    display: none;
+  }
 }

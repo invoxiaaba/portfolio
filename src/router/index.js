@@ -1,6 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
+import LoaderHome from "../views/LoaderHome.vue";
 import About from "../views/About.vue";
 import Projet1 from "../views/Projet-1.vue";
 import Projet2 from "../views/Projet-2.vue";
@@ -14,6 +15,11 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: "/",
+    name: "LoaderHome",
+    component: LoaderHome
+  },
+  {
+    path: "/home",
     name: "home",
     component: Home
   },

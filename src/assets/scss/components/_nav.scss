@@ -14,7 +14,7 @@
     left: $left-nav-link-01;
 
     @include sm {
-      top: 18vh;
+      top: $top-nav-link-01-sm;
       left: 50%;
     }
   }
@@ -23,7 +23,7 @@
     left: $left-nav-link-02;
 
     @include sm {
-      top: 33vh;
+      top: $top-nav-link-02-sm;
       left: 50%;
     }
   }
@@ -32,7 +32,7 @@
     left: $left-nav-link-03;
 
     @include sm {
-      top: 50vh;
+      top: $top-nav-link-03-sm;
       left: 50%;
     }
   }
@@ -41,7 +41,7 @@
     left: $left-nav-link-04;
 
     @include sm {
-      top: 68vh;
+      top: $top-nav-link-04-sm;
       left: 50%;
     }
   }
@@ -50,7 +50,7 @@
     left: $left-nav-link-05;
 
     @include sm {
-      top: 85vh;
+      top: $top-nav-link-05-sm;
       left: 50%;
     }
   }
@@ -73,7 +73,7 @@
   text-decoration: none;
 
   @include sm {
-    font-size: 18vw;
+    font-size: 14vw;
   }
 }
 
@@ -101,37 +101,67 @@
   left: $left-nav-link-01;
   animation: fade-01 1s ease forwards;
   animation-delay: 0.8s;
+
+  @include sm {
+    left: $top-nav-link-01-sm;
+    animation: fade-01-sm 1s ease forwards;
+    animation-delay: 0.8s;
+  }
 }
 
 .nav-link-02 {
   left: $left-nav-link-02;
   animation: fade-02 1s ease forwards;
   animation-delay: 0.8s;
+
+  @include sm {
+    left: $top-nav-link-02-sm;
+    animation: fade-02-sm 1s ease forwards;
+    animation-delay: 0.8s;
+  }
 }
 
 .nav-link-03 {
   left: $left-nav-link-03;
   animation: fade-03 1s ease forwards;
   animation-delay: 0.8s;
+
+  @include sm {
+    left: $top-nav-link-03-sm;
+    animation: fade-03-sm 1s ease forwards;
+    animation-delay: 0.8s;
+  }
 }
 
 .nav-link-04 {
   left: $left-nav-link-04;
   animation: fade-04 1s ease forwards;
   animation-delay: 0.8s;
+
+  @include sm {
+    left: $top-nav-link-04-sm;
+    animation: fade-04-sm 1s ease forwards;
+    animation-delay: 0.8s;
+  }
 }
 
 .nav-link-05 {
   left: $left-nav-link-05;
   animation: fade-05 1s ease forwards;
   animation-delay: 0.8s;
+
+  @include sm {
+    left: $top-nav-link-05-sm;
+    animation: fade-05-sm 1s ease forwards;
+    animation-delay: 0.8s;
+  }
 }
 
 .nav-prev,
 .nav-next {
-  @include absolute-position;
   position: fixed;
   z-index: 11;
+  top: 50%;
 
   color: $color-white;
   font-family: $primary-font;
@@ -179,10 +209,14 @@
   align-items: center;
   justify-content: space-around;
   width: calc(100% - 100px);
-  height: 300px;
+  height: 220px;
   padding: 0 50px;
 
   background-color: $color-black;
+
+  @include sm {
+    height: 100px;
+  }
 
   a {
     color: $color-white;
@@ -197,7 +231,7 @@
 .nav-back,
 .nav-prolife {
   position: fixed;
-  z-index: 3;
+  z-index: 1010;
   top: 50px;
   right: 50px;
 

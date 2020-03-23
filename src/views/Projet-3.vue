@@ -1,50 +1,34 @@
 <template>
-  <div class="container-projet">
-    <CustomCursor />
-    <BtnBack />
-    <header class="header-projet projet-3">
-      <a class="nav-projet-link nav-link-03">03</a>
-      <router-link class="nav-next" to="/projet4">O4</router-link>
-      <router-link class="nav-prev" to="/projet2">02</router-link>
-      <Scroll />
-    </header>
-    <div class="bg-white">
-      <section>
-        <p
-          class="p-details"
-        >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error iusto debitis ut beatae? Aut dolore veniam soluta quaerat numquam fuga. Facilis optio accusamus voluptates sit, tempore id aut blanditiis nostrum.</p>
-        <Slider
-          v-bind:images="
-          [
-        'https://cdn.pixabay.com/photo/2015/12/12/15/24/amsterdam-1089646_1280.jpg',
-        'https://cdn.pixabay.com/photo/2016/02/17/23/03/usa-1206240_1280.jpg',
-        'https://cdn.pixabay.com/photo/2015/05/15/14/27/eiffel-tower-768501_1280.jpg',
-        'https://cdn.pixabay.com/photo/2016/12/04/19/30/berlin-cathedral-1882397_1280.jpg'
-           ]"
-        />
-      </section>
-    </div>
-    <Footer />
-  </div>
+  <TemplateProject
+    project_name="Referemdoom"
+    text_name="referemdoom"
+    nav_active="03"
+    nav_link="nav-link-03"
+    nav_next="04"
+    link_next="/projet4"
+    nav_prev="02"
+    link_prev="/projet2"
+    text_role="Front end develop"
+    text_client="Erick Priou"
+    text_website="/"
+    text_desc="Referemdoom is a mobile application to gather and share the opinions of each citizen for the municipal elections.
+  Thus, they will have the opportunity to take part in an idea by voting for it with a yes or no vote.
+  Those who get enough yes votes will be implemented in their city."
+    img_bg="projet-3"
+    mobile_format="1"
+    text_teck="React Native"
+  />
 </template>
 
-
 <script>
-import Slider from "../components/Slider";
-import BtnBack from "../components/BtnBack";
-import Footer from "../components/FooterProjet";
-import CustomCursor from "../components/CustomCursor";
-
+import TemplateProject from "./TemplateProject";
 export default {
   name: "projet3",
   components: {
-    Slider,
-    BtnBack,
-    Footer,
-    CustomCursor
+    TemplateProject
   },
   data() {
     return {};
   }
 };
-</script>
+</script>ƒ

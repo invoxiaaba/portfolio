@@ -12,6 +12,19 @@
   }
 }
 
+@keyframes fade-01-sm {
+  from {
+    top: $top-nav-link-01-sm;
+    left: 50%;
+  }
+
+  to {
+    top: 50%;
+    left: 50%;
+    font-size: 200px;
+  }
+}
+
 @keyframes fade-02 {
   from {
     left: $left-nav-link-02;
@@ -20,6 +33,19 @@
   to {
     left: 50%;
     font-size: 300px;
+  }
+}
+
+@keyframes fade-02-sm {
+  from {
+    top: $top-nav-link-02-sm;
+    left: 50%;
+  }
+
+  to {
+    top: 50%;
+    left: 50%;
+    font-size: 200px;
   }
 }
 
@@ -34,6 +60,19 @@
   }
 }
 
+@keyframes fade-03-sm {
+  from {
+    top: $top-nav-link-03-sm;
+    left: 50%;
+  }
+
+  to {
+    top: 50%;
+    left: 50%;
+    font-size: 200px;
+  }
+}
+
 @keyframes fade-04 {
   from {
     left: $left-nav-link-04;
@@ -45,6 +84,19 @@
   }
 }
 
+@keyframes fade-04-sm {
+  from {
+    top: $top-nav-link-04-sm;
+    left: 50%;
+  }
+
+  to {
+    top: 50%;
+    left: 50%;
+    font-size: 200px;
+  }
+}
+
 @keyframes fade-05 {
   from {
     left: $left-nav-link-05;
@@ -53,6 +105,19 @@
   to {
     left: 50%;
     font-size: 300px;
+  }
+}
+
+@keyframes fade-05-sm {
+  from {
+    top: $top-nav-link-05-sm;
+    left: 50%;
+  }
+
+  to {
+    top: 50%;
+    left: 50%;
+    font-size: 200px;
   }
 }
 
@@ -72,7 +137,7 @@
 @keyframes rev-block {
   0% {
     top: 0;
-    height: 0%;
+    height: 0;
   }
 
   50% {
@@ -82,16 +147,86 @@
 
   100% {
     top: 100%;
-    height: 0%;
+    height: 0;
   }
 }
 
 @keyframes loader {
-  0% {
+  from {
     height: 100vh;
   }
 
   to {
-    height: 0vh;
+    height: 0;
+  }
+}
+
+@keyframes loaderBlock {
+  from {
+    height: 400px;
+  }
+
+  to {
+    height: 0;
+  }
+}
+
+@keyframes loader01 {
+  0% {
+    transform: translateX(-400px);
+  }
+
+
+  25% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(-400px);
+  }
+
+
+  75% {
+    transform: translateX(0);
+  }
+
+  100% {
+    visibility: hidden;
+    transform: translateX(-400px);
+  }
+}
+
+@keyframes loader02 {
+  0% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-400px);
+  }
+
+  50% {
+    transform: translateX(-0);
+  }
+
+  75% {
+    transform: translateX(-400px);
+  }
+
+  100% {
+    visibility: hidden;
+    transform: translateX(0);
+  }
+}
+
+// Spotify
+
+@keyframes spotify {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
   }
 }

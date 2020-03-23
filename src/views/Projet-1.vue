@@ -1,16 +1,21 @@
 <template>
   <TemplateProject
-    text_name="bellybump"
+    project_name="LaPetitePhoto.C"
+    text_name="lapetitephotoc"
     nav_active="01"
-    nav_link_05="nav-link-01"
+    nav_link="nav-link-01"
     nav_next="02"
     link_next="/projet2"
     nav_prev="05"
     link_prev="/projet5"
-    text_role="Dev"
+    text_role="Front end develop"
     text_client="Clara Bourillon"
     text_website="LapetitePhoto.C"
+    text_desc="Lapetitepho.C is a project of an amateur photographer. Through this site, you can find her Portfolio as 
+    a showcase site. She makes portraits in color as well as in black and white but also pictures of landscapes or animals."
     img_bg="projet-1"
+    mobile_format="0"
+    text_teck="HTML - CSS / SASS - Javascript"
   />
 </template>
 

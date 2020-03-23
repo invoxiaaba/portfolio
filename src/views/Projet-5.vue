@@ -1,84 +1,37 @@
 <template>
-  <div class>
-    <div class="container-projet">
-      <CustomCursor />
-      <BtnBack />
-      <header class="header-projet projet-5">
-        <a class="nav-projet-link nav-link-05">05</a>
-        <router-link class="nav-next" to="/projet1">O1</router-link>
-        <router-link class="nav-prev" to="/projet4">04</router-link>
-        <Scroll />
-      </header>
-      <div class="bg-grey">
-        <section class="container-details-projet">
-          <div class="flex">
-            <div class="col-4 pd-20">
-              <p class="title-desc">Role</p>
-              <p class="p-desc">Front end Development</p>
-              <br />
-              <p class="title-desc">Client</p>
-              <p class="p-desc">School work</p>
-              <br />
-              <p class="title-desc">Website</p>
-              <p class="p-desc">bellybump.fr</p>
-            </div>
-            <div class="col-4 pd-20">
-              <p class="p-desc">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error iusto debitis ut beatae? Aut dolore veniam soluta quaerat
-                numquam fuga. Facilis optio accusamus voluptates sit, tempore id aut blanditiis nostrum.
-              </p>
-            </div>
-            <div class="col-12 box">
-              <img src="../assets/img/bellybump.jpg" alt="bellybump" />
-              <div class="overlay"></div>
-            </div>
-            <div class="col-12 box">
-              <img src="../assets/img/projet5/maquette_bellybump.jpg" alt="bellybump" />
-              <div class="overlay"></div>
-            </div>
-          </div>
-        </section>
-      </div>
-      <Footer />
-    </div>
-  </div>
+  <TemplateProject
+    project_name="Bellybump"
+    text_name="bellybump"
+    nav_active="05"
+    nav_link="nav-link-05"
+    nav_next="01"
+    link_next="/projet1"
+    nav_prev="04"
+    link_prev="/projet4"
+    text_role="Front end developer"
+    text_client="Tutored project"
+    text_website="bellybump.fr"
+    text_desc="Nowadays, the future fathers are not enought involved in the couple during the pregnancy. A solution? Belly Bump.
+    Our product as been created for couple who are expecting a baby. By proposing this mobile application, 
+    we resolve problem such as the lack of involvement of the father, the oversight of important meetings and fears about the pregnancy. 
+    It meets with needs like be well-organized during pregnancy and the access of information about work and pregnancy, meals, fears, and others. 
+    Thereupon, this application makes easier the communication between the couple because each can have access to the personal data of the other. 
+    Thanks to the articles of the app, the couple can interact with each others with new topics. "
+    img_bg="projet-5"
+    mobile_format="1"
+    text_teck="React Native"
+  />
 </template>
 
 <script>
-import BtnBack from "../components/BtnBack";
-import Footer from "../components/FooterProjet";
-import CustomCursor from "../components/CustomCursor";
-
-import { TimelineMax, Power4 } from "gsap";
-
+import TemplateProject from "./TemplateProject";
 export default {
   name: "projet5",
   components: {
-    BtnBack,
-    Footer,
-    CustomCursor
+    TemplateProject
   },
   data() {
     return {};
-  },
-
-  mounted() {
-    var animateIn = new TimelineMax();
-
-    animateIn.fromTo(
-      ".overlay",
-      2,
-      {
-        skewX: 30,
-        scale: 1.5
-      },
-      {
-        skewX: 0,
-        xPercent: 100,
-        transformOrigin: "0% 100%",
-        ease: Power4.easeOut
-      }
-    );
   }
 };
 </script>

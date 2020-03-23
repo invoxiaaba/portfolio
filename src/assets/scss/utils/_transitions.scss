@@ -2,14 +2,16 @@
 // Transition Scroll //
 ///////////////////////
 .before-enter {
-  // opacity: 0;
   transform: translateX(-100px);
   transition: all 1s ease-out;
+
+  opacity: 0;
 }
 
 .enter {
-  // opacity: 1;
   transform: translateX(0);
+
+  opacity: 1;
 }
 
 ////////////////////////
@@ -18,14 +20,37 @@
 .fade-enter-active,
 .fade-leave-active {
 
-  // position: absolute;
   .nav-projet-link {
-    opacity: 0;
     transition: all 0.8s ease;
+
+    opacity: 0;
   }
 }
 
 .fade-enter,
 .fade-leave-to {
   transition: all 0.8s ease;
+}
+
+////////////////////////
+// Transition Sldier //
+///////////////////////
+
+.images-enter-active,
+.images-leave-active {
+  position: absolute;
+
+  transition: 0s ease-out;
+}
+
+.images-enter {
+  transform: translate(100%, 0);
+
+  opacity: 1;
+}
+
+.images-leave-to {
+  transform: translate(-100%, 0);
+
+  opacity: 0;
 }

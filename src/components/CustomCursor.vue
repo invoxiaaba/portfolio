@@ -48,12 +48,12 @@ export default {
 
     // NAV LINK
 
-    $(".nav-projet-link").on("mouseenter", function() {
+    $(".nav-project-link-hover").on("mouseenter", function() {
       cursor.addClass("active");
       follower.addClass("active");
     });
 
-    $(".nav-projet-link").on("mouseleave", function() {
+    $(".nav-project-link-hover").on("mouseleave", function() {
       cursor.removeClass("active");
       follower.removeClass("active");
     });

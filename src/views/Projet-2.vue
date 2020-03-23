@@ -1,49 +1,30 @@
 <template>
-  <div class="container-projet">
-    <CustomCursor />
-    <BtnBack />
-    <header class="header-projet projet-2">
-      <a class="nav-projet-link nav-link-02">02</a>
-      <router-link class="nav-next" to="/projet3">O3</router-link>
-      <router-link class="nav-prev" to="/projet1">01</router-link>
-      <Scroll />
-    </header>
-    <div class="bg-white">
-      <section>
-        <p class="p-details">
-          Lapetitephoho.C est un projet d'une photographe amateur. À travers ce site, vous pouvez y trouver son Portfolio
-          sous forme de site vitrine. Elle réalise aussi bien des portraits en couleurs qu'en noir et blanc mais aussi des
-          photos de paysages ou d'animaux.
-        </p>
-        <Slider
-          v-bind:images="
-          [
-        'https://cdn.pixabay.com/photo/2015/12/12/15/24/amsterdam-1089646_1280.jpg',
-        'https://cdn.pixabay.com/photo/2016/02/17/23/03/usa-1206240_1280.jpg',
-        'https://cdn.pixabay.com/photo/2015/05/15/14/27/eiffel-tower-768501_1280.jpg',
-        'https://cdn.pixabay.com/photo/2016/12/04/19/30/berlin-cathedral-1882397_1280.jpg'
-           ]"
-        />
-      </section>
-    </div>
-    <Footer />
-  </div>
+  <TemplateProject
+    project_name="Samu Social de Paris"
+    text_name="ssp3"
+    nav_active="02"
+    nav_link="nav-link-02"
+    nav_next="03"
+    link_next="/projet3"
+    nav_prev="01"
+    link_prev="/projet1"
+    text_role="Front end develop"
+    text_client="Samu Social de Paris"
+    text_website
+    text_desc="Lapetitepho.C is a project of an amateur photographer. Through this site, you can find her Portfolio as 
+    a showcase site. She makes portraits in color as well as in black and white but also pictures of landscapes or animals."
+    img_bg="projet-2"
+    mobile_format="0"
+    text_teck="React JS - CSS / SASS - Full Calendar"
+  />
 </template>
 
-
 <script>
-import Slider from "../components/Slider";
-import BtnBack from "../components/BtnBack";
-import Footer from "../components/FooterProjet";
-import CustomCursor from "../components/CustomCursor";
-
+import TemplateProject from "./TemplateProject";
 export default {
   name: "projet2",
   components: {
-    Slider,
-    BtnBack,
-    Footer,
-    CustomCursor
+    TemplateProject
   },
   data() {
     return {};

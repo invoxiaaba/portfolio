@@ -1,5 +1,5 @@
 <template>
-  <router-link to="/">
+  <router-link to="/home">
     <div ref="back" class="nav-back">Back</div>
   </router-link>
 </template>

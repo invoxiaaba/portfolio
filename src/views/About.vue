@@ -1,15 +1,25 @@
 <template>
   <div class="container-about">
     <CustomCursor />
-    <!-- <div v-bind:style="{ ['width']: scrollbar() + '%' }" id="mybar"></div> -->
     <BtnBack />
+    <div class="container-spotify flex-center">
+      <img class="spotify" :src="require(`@/assets/img/svg_spotify.png`)" />
+      <a
+        href="https://open.spotify.com/playlist/78YQbRSP9ANHff1qpQdvay?si=fL2AqpXgRtWJY__ApiGXbg"
+        target="_blank"
+      >
+        <img class="spotify-logo" :src="require(`@/assets/img/spotify-logo.png`)" />
+      </a>
+    </div>
     <div class="header-page header-profil">
-      <h1 ref="titleProfile" class="h1-profil">Adrien</h1>
-      <h2 ref="subtitleProfile" class="h2-profil">Front end developer</h2>
-      <Scroll />
+      <div class="h-v-center">
+        <h1 data-scroll-speed="9" ref="titleProfile" class="h1-profil">Adrien 👋</h1>
+        <h2 ref="subtitleProfile" class="h2-profil">Front end developer</h2>
+      </div>
     </div>
 
     <section v-scrollanimation class="p-details">
+      <h2>About</h2>
       <div>
         <div :style="cursorCircle" :class="{newCursor: cursorIsHidden}" class="cursor-about"></div>
         <div :style="cursorCircle" :class="{newCursor2: cursorIsHidden2}" class="cursor-about"></div>
@@ -33,6 +43,7 @@
       </div>
     </section>
     <section class="p-details">
+        <h2>Skills</h2>
       <div class="row-column">
         <p v-scrollanimation class="p-skill">Vue JS</p>
         <p v-scrollanimation class="p-skill">React JS</p>
@@ -45,24 +56,48 @@
         <p v-scrollanimation class="p-skill">SEO</p>
       </div>
     </section>
+
+    <section class="flex">
+      <h2 data-scroll-speed="7" class="col-12 title-parallax">My passion</h2>
+      <br />
+      <div class="container-polaroid">
+        <div class="polaroid col-12">
+          <Slider
+            v-bind:images="
+          [
+         '/static/img/polaroid-1.jpg',
+         '/static/img/polaroid-2.jpg',
+         '/static/img/polaroid-3.jpg'
+           ]"
+            v-bind:texts="
+          [
+         'Festivals',
+         'Ski',
+         'Travels'
+           ]"
+          />
+        </div>
+      </div>
+    </section>
     <FooterProfil />
   </div>
 </template>
 
 <script>
-import Scroll from "../components/Scroll";
 import BtnBack from "../components/BtnBack";
-import CustomCursor from "../components/CustomCursor";
 import FooterProfil from "../components/FooterProfil";
-
+import Slider from "../components/Slider";
+import CustomCursor from "../components/CustomCursor";
 import { TimelineLite, Back } from "gsap";
+import JQuery from "jquery";
+let $ = JQuery;
 
 export default {
   components: {
-    Scroll,
     BtnBack,
     CustomCursor,
-    FooterProfil
+    FooterProfil,
+    Slider
   },
   data() {
     return {
@@ -75,30 +110,47 @@ export default {
     };
   },
 
-  computed: {
-    cursorCircle() {
-      return `transform: translateX(${this.xPage}px) translateY(${this.yPage}px) translateZ(0) translate3d(0, 0, 0);`;
-    }
-  },
-  methods: {
-    moveCursor(e) {
-      setTimeout(() => {
-        this.xPage = e.clientX - 15;
-        this.yPage = e.clientY - 15;
-      }, 100);
-    },
-    scrollbar() {
-      var winScroll =
-        document.body.scrollTop || document.documentElement.scrollTop;
-      var height =
-        document.documentElement.scrollHeight -
-        document.documentElement.clientHeight;
-      this.scrolled = (winScroll / height) * 100;
-      return this.scrolled;
-    }
-  },
+  computed() {},
+  methods() {},
 
   mounted() {
+    $.fn.moveIt = function() {
+      var $window = $(window);
+      var instances = [];
+
+      $(this).each(function() {
+        instances.push(new moveItItem($(this)));
+      });
+
+      window.addEventListener(
+        "scroll",
+        function() {
+          var scrollTop = $window.scrollTop();
+          instances.forEach(function(inst) {
+            inst.update(scrollTop);
+          });
+        },
+        { passive: true }
+      );
+    };
+
+    var moveItItem = function(el) {
+      this.el = $(el);
+      this.speed = parseInt(this.el.attr("data-scroll-speed"));
+    };
+
+    moveItItem.prototype.update = function(scrollTop) {
+      this.el.css(
+        "transform",
+        "translateY(" + -(scrollTop / this.speed) + "px)"
+      );
+    };
+
+    // Initialization
+    $(function() {
+      $("[data-scroll-speed]").moveIt();
+    });
+
     document.addEventListener("mousemove", this.moveCursor);
     window.addEventListener("scroll", this.scrollbar);
 

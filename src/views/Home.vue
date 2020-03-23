@@ -8,9 +8,9 @@
 </template>
 
 <script>
-
 import NavProjet from "@/components/NavProjet";
 import { TimelineLite, Back } from "gsap";
+// import { EventBus } from "../event-bus";
 
 export default {
   name: "home",
@@ -30,3 +30,12 @@ export default {
   }
 };
 </script>
+
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+.nav-prolife {
+  color: white !important;
+  mix-blend-mode: inherit;
+}
+</style>

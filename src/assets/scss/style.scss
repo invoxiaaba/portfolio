@@ -1,8 +1,8 @@
 /* UTILS */
 @import './utils/variables';
+@import './utils/mixins';
 @import './utils/animations';
 @import './utils/state';
-@import './utils/mixins';
 @import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Comfortaa:300,400&display=swap');
 
@@ -12,7 +12,6 @@
 @import './components/cursor';
 @import './components/btn';
 @import './components/slider';
-@import './components/scroll';
 @import './components/404';
 
 @import './utils/transitions';

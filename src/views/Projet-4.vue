@@ -11,9 +11,9 @@
     text_role="Front end develop"
     text_client="/"
     text_website="adrienbannwarth/portraitchinois"
-    text_desc="The concept of the Chinese portrait is particularly simple. It is about detecting certain aspects of personality or
-  identifying tastes or preferences through a questionnaire entirely based on identification with objects, elements or people.
-  If you wish to discover my world, I invite you to discover it."
+    text_desc="The concept of the Chinese portrait is particularly simple. 
+    It consists in detecting certain personality traits or identifying tastes or preferences through a questionnaire entirely based on identifying yourself to objects, 
+    elements or people. If you wish to discover my world, I invite you to do so."
     img_bg="projet-4"
     mobile_format="0"
     text_teck="HTML - CSS - javascript"

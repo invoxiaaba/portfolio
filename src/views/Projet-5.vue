@@ -11,12 +11,12 @@
     text_role="Front end developer"
     text_client="Tutored project"
     text_website="bellybump.fr"
-    text_desc="Nowadays, the future fathers are not enought involved in the couple during the pregnancy. A solution? Belly Bump.
-    Our product as been created for couple who are expecting a baby. By proposing this mobile application, 
-    we resolve problem such as the lack of involvement of the father, the oversight of important meetings and fears about the pregnancy. 
-    It meets with needs like be well-organized during pregnancy and the access of information about work and pregnancy, meals, fears, and others. 
-    Thereupon, this application makes easier the communication between the couple because each can have access to the personal data of the other. 
-    Thanks to the articles of the app, the couple can interact with each others with new topics. "
+    text_desc="Nowadays, fathers-to-be are not enough involved in the couple during the pregnancy. 
+    Our solution? Belly Bump. Our product has been created for couple who are expecting a baby. By proposing this mobile application, 
+    we resolve problems such as the lack of the father’s involvement, the oversight of important meetings and fears about the pregnancy. 
+    It meets with needs like being well-organized during pregnancy and having access to information about work and pregnancy, meals, fears, and other topics. 
+    Thereupon, this application makes easier the communication within the couple because each can have access to the personal data of the other. 
+    Thanks to the articles of the app, the couple can interact with each other through new topics."
     img_bg="projet-5"
     mobile_format="1"
     text_teck="React Native"

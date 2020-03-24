@@ -3,12 +3,12 @@
     <CustomCursor />
     <BtnBack />
     <div class="container-spotify flex-center">
-      <img class="spotify" :src="require(`@/assets/img/svg_spotify.png`)" />
+      <img ref="spotifyContent" class="spotify" :src="require(`@/assets/img/svg_spotify.png`)" />
       <a
         href="https://open.spotify.com/playlist/78YQbRSP9ANHff1qpQdvay?si=fL2AqpXgRtWJY__ApiGXbg"
         target="_blank"
       >
-        <img class="spotify-logo" :src="require(`@/assets/img/spotify-logo.png`)" />
+        <img ref="spotifyLogo" class="spotify-logo" :src="require(`@/assets/img/spotify-logo.png`)" />
       </a>
     </div>
     <div class="header-page header-profil">
@@ -21,29 +21,19 @@
     <section v-scrollanimation class="p-details">
       <h2>About</h2>
       <div>
-        <div :style="cursorCircle" :class="{newCursor: cursorIsHidden}" class="cursor-about"></div>
-        <div :style="cursorCircle" :class="{newCursor2: cursorIsHidden2}" class="cursor-about"></div>
-
+        <div :style="cursorCircle" :class="{newCursor: cursorIsHidden}" class="cursor-about"></div>Hello, I am
         <span
           @mouseover="cursorIsHidden = true"
           @mouseleave="cursorIsHidden = false"
           class="span"
-        >creative</span>
-        ipsum dolor, sit amet
-        consectetur adipisicing elit. Praesentium doloribus, corrupti soluta impedit eos quasi mollitia maxime,
-        nihil eius perspiciatis molestias quos accusamus nisi necessitatibus dolore numquam, sapiente velit sit.
-        <span
-          @mouseover="cursorIsHidden2 = true"
-          @mouseleave="cursorIsHidden2 = false"
-          class="span"
-        >creative</span>
-        dolor, sit amet consectetur adipisicing elit. Praesentium doloribus, corrupti soluta impedit eos quasi mollitia maxime,
-        nihil eius perspiciatis molestias quos accusamus nisi necessitatibus dolore numquam, sapiente velit sit.
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium doloribus, corrupti soluta impedit eos quasi mollitia maxime,
+        >Adrien</span>
+        and currently in my third year at HETIC. At the meantime, I work as front-end developer for the company Invoxia.
+        I had a similar experience at Vingt-cinq. I create solutions to make ideas better and projects matter ;)
+        I code with a special interest in interactivity and design. Want to work with me? Feel free to contact me!
       </div>
     </section>
     <section class="p-details">
-        <h2>Skills</h2>
+      <h2>Skills</h2>
       <div class="row-column">
         <p v-scrollanimation class="p-skill">Vue JS</p>
         <p v-scrollanimation class="p-skill">React JS</p>
@@ -154,7 +144,12 @@ export default {
     document.addEventListener("mousemove", this.moveCursor);
     window.addEventListener("scroll", this.scrollbar);
 
-    const { titleProfile, subtitleProfile } = this.$refs;
+    const {
+      titleProfile,
+      subtitleProfile,
+      spotifyContent,
+      spotifyLogo
+    } = this.$refs;
     const timeline = new TimelineLite();
 
     timeline.from(titleProfile, 1, {
@@ -165,6 +160,28 @@ export default {
     });
     timeline.from(
       subtitleProfile,
+      1,
+      {
+        y: 30,
+        opacity: 0,
+        delay: 1.5,
+        ease: Back.easeInOut
+      },
+      "-=2"
+    );
+    timeline.from(
+      spotifyContent,
+      1,
+      {
+        y: 30,
+        opacity: 0,
+        delay: 1.5,
+        ease: Back.easeInOut
+      },
+      "-=2"
+    );
+    timeline.from(
+      spotifyLogo,
       1,
       {
         y: 30,

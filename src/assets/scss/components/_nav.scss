@@ -61,7 +61,7 @@
 }
 
 .nav-projet-link {
-  position: absolute;
+  position: fixed;
   top: 50%;
 
   transform: translate(-50%, -50%);
@@ -174,7 +174,7 @@
 }
 
 .nav-next {
-  left: calc(100% - 30px);
+  left: calc(100% - 45px);
 }
 
 /* LANG */

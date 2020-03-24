@@ -133,12 +133,11 @@ section {
 }
 
 .h-v-center {
+  @include absolute-position;
   left: 45%;
   width: 100%;
 
   text-align: initial;
-
-  @include absolute-position;
 }
 
 .container-home {
@@ -180,9 +179,24 @@ section {
   text-align: left;
   text-transform: uppercase;
 
+  @include lg {
+    font-size: 50px;
+    line-height: 3.5rem;
+  }
+
+  @include md {
+    font-size: 40px;
+    line-height: 3rem;
+  }
+
   @include sm {
     font-size: 28px;
     line-height: 2.5rem;
+  }
+
+  @include xs {
+    font-size: 20px;
+    line-height: 1.8rem;
   }
 }
 
@@ -332,7 +346,7 @@ section {
 
 .loader-container {
   position: fixed;
-  z-index: 1001;
+  z-index: 1020;
   width: 100%;
   height: 100vh;
 
@@ -455,34 +469,26 @@ section {
 
 .box {
   position: relative;
-  width: 80%;
   overflow: hidden;
+
+  -webkit-box-shadow: 1px 1px 19px -4px rgba(138, 138, 138, 1);
+  -moz-box-shadow: 1px 1px 19px -4px rgba(138, 138, 138, 1);
+  box-shadow: 1px 1px 19px -4px rgba(138, 138, 138, 1);
 
   img {
     width: 100%;
-  }
-
-  .overlay {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
     height: 100%;
-
-    background: $color-grey;
   }
 }
 
 .box-mobile {
   position: relative;
-  width: 50%;
+  width: 40%;
   overflow: hidden;
 
   @include sm {
     width: 100%;
   }
-
 
   img {
     width: 60%;
@@ -495,9 +501,7 @@ section {
 
 .box,
 .box-mobile {
-  img {
-    margin: 20px 0;
-  }
+  margin: 20px 0;
 }
 
 .polaroid {
@@ -505,7 +509,7 @@ section {
   z-index: 2;
   width: 400px;
   height: 490px;
-  overflow-x: hidden;
+  overflow: hidden;
 
   transition: all 0.5s cubic-bezier(0.25, 1, 0.3, 1);
 
@@ -514,8 +518,10 @@ section {
   box-shadow: -1px 0 11px -2px rgba(94, 94, 94, 1);
 
   @include sm {
-    width: 250px;
-    height: 335px;
+    width: 260px;
+    height: 330px;
+
+    border: solid 20px $color-white;
   }
 
   @include xs {
@@ -540,6 +546,10 @@ section {
     height: 90px;
 
     background-color: $color-white;
+
+    @include sm {
+      height: 70px;
+    }
   }
 }
 

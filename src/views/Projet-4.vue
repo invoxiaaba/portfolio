@@ -10,7 +10,7 @@
     link_prev="/projet3"
     text_role="Front end develop"
     text_client="/"
-    text_website="adrienbannwarth/portraitchinois"
+    text_website="http://portraitchinois.adrienbannwarth.com"
     text_desc="The concept of the Chinese portrait is particularly simple. 
     It consists in detecting certain personality traits or identifying tastes or preferences through a questionnaire entirely based on identifying yourself to objects, 
     elements or people. If you wish to discover my world, I invite you to do so."

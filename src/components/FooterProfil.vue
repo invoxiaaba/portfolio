@@ -10,7 +10,7 @@
         <br />
       </div>
       <div class="flex-center col-6">
-        <a href>Resume</a>
+        <a href="/static/img/cv_adrien_b.pdf" target="_blank">Resume</a>
         <br />
         <a href="mailto:adrien.bann@gmail.com">Contact me</a>
       </div>

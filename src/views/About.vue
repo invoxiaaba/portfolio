@@ -13,20 +13,22 @@
     </div>
     <div class="header-page header-profil">
       <div class="h-v-center">
-        <h1 data-scroll-speed="9" ref="titleProfile" class="h1-profil">Adrien 👋</h1>
+        <h1 data-scroll-speed="9" ref="titleProfile" class="h1-profil">Adrien</h1>
         <h2 ref="subtitleProfile" class="h2-profil">Front end developer</h2>
       </div>
+      <Scroll />
     </div>
 
     <section v-scrollanimation class="p-details">
       <h2>About</h2>
       <div>
         <div :style="cursorCircle" :class="{newCursor: cursorIsHidden}" class="cursor-about"></div>Hello, I am
-        <span
+        <!-- <span
           @mouseover="cursorIsHidden = true"
           @mouseleave="cursorIsHidden = false"
           class="span"
-        >Adrien</span>
+        >Adrien</span> -->
+        Adrien
         and currently in my third year at HETIC. At the meantime, I work as front-end developer for the company Invoxia.
         I had a similar experience at Vingt-cinq. I create solutions to make ideas better and projects matter ;)
         I code with a special interest in interactivity and design. Want to work with me? Feel free to contact me!
@@ -79,6 +81,7 @@ import FooterProfil from "../components/FooterProfil";
 import Slider from "../components/Slider";
 import CustomCursor from "../components/CustomCursor";
 import { TimelineLite, Back } from "gsap";
+import Scroll from "../components/Scroll";
 import JQuery from "jquery";
 let $ = JQuery;
 
@@ -87,7 +90,8 @@ export default {
     BtnBack,
     CustomCursor,
     FooterProfil,
-    Slider
+    Slider,
+    Scroll
   },
   data() {
     return {
@@ -184,7 +188,6 @@ export default {
       spotifyLogo,
       1,
       {
-        y: 30,
         opacity: 0,
         delay: 1.5,
         ease: Back.easeInOut

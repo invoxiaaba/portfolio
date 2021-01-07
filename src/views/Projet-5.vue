@@ -10,7 +10,7 @@
     link_prev="/projet4"
     text_role="Front end developer"
     text_client="Tutored project"
-    text_website="bellybump.fr"
+    text_website="/"
     text_desc="Nowadays, fathers-to-be are not enough involved in the couple during the pregnancy. 
     Our solution? Belly Bump. Our product has been created for couple who are expecting a baby. By proposing this mobile application, 
     we resolve problems such as the lack of the father’s involvement, the oversight of important meetings and fears about the pregnancy. 

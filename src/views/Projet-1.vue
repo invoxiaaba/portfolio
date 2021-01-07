@@ -10,7 +10,7 @@
     link_prev="/projet5"
     text_role="Front end develop"
     text_client="Clara Bourillon"
-    text_website="LapetitePhoto.C"
+    text_website="https://lapetitephotoc.com"
     text_desc="Lapetitepho.C is the project of an amateur photographer. On this website, you can find her Portfolio presented as a showcase site. 
     She takes portraits in color, black and white but also pictures of landscapes or animals."
     img_bg="projet-1"

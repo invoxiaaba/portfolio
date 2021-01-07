@@ -35,7 +35,8 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .nav-prolife {
-  color: white !important;
+  color: white;
   mix-blend-mode: inherit;
+  font-size: 14px;
 }
 </style>

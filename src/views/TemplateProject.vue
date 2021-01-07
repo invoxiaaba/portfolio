@@ -5,10 +5,12 @@
       <CustomCursor />
       <BtnBack />
       <header data-scroll-speed="5" class="header-projet" :class="img_bg">
+        <Scroll />
         <a class="nav-projet-link" :class="nav_link">{{nav_active}}</a>
       </header>
       <router-link class="nav-next" :to="link_next">{{nav_next}}</router-link>
       <router-link class="nav-prev" :to="link_prev">{{nav_prev}}</router-link>
+
       <div class="bg-white">
         <h2 data-scroll-speed="7" class="col-12 title-parallax title-parallax-01">{{project_name}}</h2>
 
@@ -78,6 +80,7 @@
 import BtnBack from "../components/BtnBack";
 import Footer from "../components/FooterProjet";
 import CustomCursor from "../components/CustomCursor";
+import Scroll from "../components/Scroll";
 import JQuery from "jquery";
 let $ = JQuery;
 import { TimelineMax, Power4 } from "gsap";
@@ -106,7 +109,8 @@ export default {
   components: {
     BtnBack,
     Footer,
-    CustomCursor
+    CustomCursor,
+    Scroll
   },
   data() {
     return {
